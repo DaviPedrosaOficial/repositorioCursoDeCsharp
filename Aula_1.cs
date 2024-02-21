@@ -3,9 +3,9 @@ using System.IO.Pipes;
 
 namespace primeiraAula
 {
-    class Exercício_1
+    class Aula_1
     {
-        static void Main(string[] arg)
+        static void _1Aula(string[] arg)
         {
             string curso = "ciências da computação";
             string nome = "Davi";
@@ -28,6 +28,8 @@ namespace primeiraAula
             Console.WriteLine("\r\nUtilizando a formatação de numeros decimais, a partir do comando .ToString -> {0} ",numero.ToString("F2"));
             
             Console.WriteLine("\r\nUtilizando a formatação de numeros decimais, a partir da formatação do PlaceHolder -> {0:F2} ",numero);
+            
+            
         }
     }
     
