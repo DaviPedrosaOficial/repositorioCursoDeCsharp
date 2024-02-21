@@ -2,5 +2,5 @@ Dependencies/
 obj/
 bin/
 .idea/
-primeiraAula.csproj
-primeiraAula.sln
+CursoDeCsharp.csproj
+CursoDeCsharp.sln
