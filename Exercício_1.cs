@@ -22,10 +22,12 @@ namespace primeiraAula
             /* Utilizando o comando '\r\n' para saltar linhas onde desejado. */
             Console.WriteLine("\r\nO intuito desse primeiro programa é aprender a utilizar o comando 'Console.WriteLine' e suas formatações.");
             
-            /* Utilizando o padrão de formatação para numeros decimais (Para isso utilizamos o comando '.ToString("F2")' onde o 'F'
-             representa a quantidade de casas decimais desejadas para o numero, ou seja, como nesse caso gostariamos de alocar apenas
-             2 casas decimais, foi-se utilizado F2. */
-            Console.WriteLine("\r\nUtilizando a formatação de numeros decimais -> {0} ",numero.ToString("F2"));
+            /* Utilizando o padrão de formatação para numeros decimais (Para isso utilizamos o comando '.ToString("F2")' ou
+             alteramos no próprio PlaceHolder ( {0 : F2} ), onde o 'F' representa a quantidade de casas decimais desejadas 
+             para o numero, ou seja, como nesse caso gostariamos de alocar apenas 2 casas decimais, foi-se utilizado F2. */
+            Console.WriteLine("\r\nUtilizando a formatação de numeros decimais, a partir do comando .ToString -> {0} ",numero.ToString("F2"));
+            
+            Console.WriteLine("\r\nUtilizando a formatação de numeros decimais, a partir da formatação do PlaceHolder -> {0:F2} ",numero);
         }
     }
     
