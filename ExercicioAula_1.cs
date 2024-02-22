@@ -1,4 +1,6 @@
-﻿using System;
+﻿/* ------ Metodo de saída ------ */
+
+using System;
 using System.Globalization;
 
 namespace primeiraAula
