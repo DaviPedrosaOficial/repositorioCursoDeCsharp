@@ -6,7 +6,7 @@ namespace CursoDeCsharp
 {
     class Aula_3
     {
-        static void Main(string[] arg)
+        static void _3Aula(string[] arg)
         {
             /* ------ Conversão implícita entre tipos ------ */
             
@@ -25,7 +25,7 @@ namespace CursoDeCsharp
             /* Já se tentarmos fazer a atribuição de um double em um float, o código não aceitará a conversão
              implícita, uma vez que o double é constituido por 8 bits e um float por 4 bits, podendo assim perder-se 
              informação durante a conversão. Se tornando assim, impróprio para a conversão. 
-              Outro problema que poderiamos ter se daria ao tentar passar um double para um inteiro, que como sabemos
+              Outro problema que poderiamos ter, se daria ao tentarmos passar um double para um inteiro, que como sabemos
               não aceita números que apresentam dizimas, tornando-se imprópria a conversão. */
             
             /* Como a intenção desse projeto é executar os comandos e averiguar suas funcionalidades, não estarei
