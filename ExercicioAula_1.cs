@@ -7,7 +7,7 @@ namespace primeiraAula
 {
     class ExercicioAula_1
     {
-        static void _1Exercicio(string[] arg)
+        static void Ex_Aula1(string[] arg)
         {
             string produto1 = "Computador";
             string produto2 = "Mesa de escritorio";
