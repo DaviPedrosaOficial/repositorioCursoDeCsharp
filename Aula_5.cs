@@ -1,4 +1,4 @@
-﻿/* ------ Entrada de dados ------ */
+﻿/* ------ Entrada de dados (Parte 1) ------ */
 
 using System;
 
@@ -6,7 +6,7 @@ namespace CursoDeCsharp{
     
         class Aula_5
         {
-                static void Main(string[] arg)
+                static void _Aula5(string[] arg)
                 {
                         /* O comando utilizado para entrada de dados no C# é o 'Console.ReadLine()', o mesmo
                          serve para receber uma entrada em 'string' enviada pelo usuário, onde a mesma poderá 
@@ -39,11 +39,35 @@ namespace CursoDeCsharp{
                          no parâmetro que o apresentaremos como separador, nesse caso o espaço(' ').
                          Vamos ver como funciona a seguir:  */
 
-                        /* Recebendo a entrada: */
-                        Console.WriteLine("\r\nInsira a seguir 3 frutas: ");
+                        /* Primeiro recebemos a entrada em uma variável separada (ent) */
+                        Console.WriteLine("\r\nInsira a seguir 3 frutas (na mesma linha): ");
                         string ent = Console.ReadLine();
                         
+                        /* Depois criamos um vetor(utilizamos '[]' para defini-lo) baseado na entrada (ent),
+                         separando seus parâmetros com base no split, que fará tal separação quando encontrar 
+                         espaços ' ' */
+                        string[] vetor = ent.Split(' ');
+                        
+                        /* Agora criamos variáveis para armazenar as entrada armazenadas nos respectivos vetores */
+                        string fruta_1 = vetor[0];
+                        string fruta_2 = vetor[1];
+                        string fruta_3 = vetor[2];
+                        
+                        /* E pronto, agora basta criar a saída */
+                        Console.WriteLine("\r\nAs frutas escolhida foram: \r\n{0}\r\n{1}\r\n{2}",fruta_1,fruta_2,fruta_3);
+                        
+                        /* Para simplificarmos ainda mais, podemos deixar de lado a primeira variável, para isso
+                         basta inserirmos o ReadLine() em sua entrada*/
 
+                        Console.WriteLine("\r\nAgora insira 3 de seus carros preferidos (também na mesma linha):");
+                        string[] vetor_2 = Console.ReadLine().Split(' ');
+
+                        string carro_1 = vetor_2[0];
+                        string carro_2 = vetor_2[1];
+                        string carro_3 = vetor_2[2];
+
+                        Console.WriteLine("\r\n{0}, ficamos felizes de saber que seus carros favoritos são: \r\n- {1}\r\n- {2}\r\n- {3}",nome,carro_1,carro_2,carro_3);
+                    
                 }
         }
 }
