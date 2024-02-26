@@ -6,7 +6,7 @@ namespace CursoDeCsharp
 {
     class Aula_4
     {
-        static void Main(string[] arg)
+        static void _4Aula(string[] arg)
         {
             /* Operadores existentes:
              - '+' = Adição;
