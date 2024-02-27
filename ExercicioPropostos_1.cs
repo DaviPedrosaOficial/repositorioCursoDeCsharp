@@ -16,11 +16,19 @@ namespace CursoDeCsharp
              Entrada: 10                       Saida: Soma = 30 
                       20                                         */
 
+            /* Entrada */
+            
             Console.WriteLine(" ------ Exercicio 1 ------");
             Console.WriteLine("Insira a seguir 2 numeros de sua escolha que serão somados (somente inteiros): ");
             int num1 = int.Parse(Console.ReadLine());
             int num2 = int.Parse(Console.ReadLine());
+            
+            /* Processamento */
+            
             int soma = num1 + num2;
+            
+            /* Saída */
+            
             Console.WriteLine("\r\nSoma = {0}",soma);
             
             
@@ -36,11 +44,19 @@ namespace CursoDeCsharp
              Entrada: 2,00                     Saída: A = 12.5664
              */
 
+            /* Entrada  */
+            
             Console.WriteLine("\r\n ------ Exercicio 2 ------");
             Console.WriteLine("Insira a seguir o valor do raio de um circulo, para que possamos calcular sua area: ");
             double raio = double.Parse(Console.ReadLine());
             double pi = 3.14159;
+            
+            /* Processamento */
+            
             double area = pi * (Math.Pow(raio, 2));
+            
+            /* Saída */
+            
             Console.WriteLine("\r\nArea do circulo: {0:F4}",area);
             
             
@@ -50,6 +66,8 @@ namespace CursoDeCsharp
             /* Fazer um programa para ler quatro valores inteiros A, B, C e D. A seguir, calcule e mostre a diferença
              do produto de A e B pelo produto de C e D segundo a fórmula: DIFERENCA = (A * B - C * D). */
 
+            /* Entrada */
+            
             Console.WriteLine("\r\n ------ Exercicio 3 ------");
             Console.WriteLine("Insira a seguir 4 numeros inteiros para que possamos calcular a seguinte formula (A * B - C * D) ");
             
@@ -65,15 +83,74 @@ namespace CursoDeCsharp
             Console.WriteLine("\r\nInsira o quarto numero: ");
             int num_4 = int.Parse(Console.ReadLine());
 
+            /* Processamento */
+            
             int diferenca = num_1 * num_2 - num_3 * num_4;
+            
+            /* Saída */
+            
             Console.WriteLine("\r\nDiferenca = {0}",diferenca);
             
             
             
             
             /* ------ 4º Exercício ------ */
+            /* Fazer um programa que leia o número de um funcionário, seu número de horas trabalhadas, o valor que
+             recebe por hora e calcula o salário desse funcionário. A seguir, mostre o número e o salário do funcionário, 
+             com duas casas decimais. */
             
+            /* Entrada */
 
+            Console.WriteLine("\r\n------ Exercicio 4 ------");
+            Console.WriteLine("Insira a seguir seu numero de funcionario: ");
+            int nFunc = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Agora insira a quantidade de horas trabalhadas nesse mes: ");
+            int hrs = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("E para finalizarmos, insira o valor de sua hora: ");
+            double valHr = double.Parse(Console.ReadLine());
+            
+            /* Processamento */
+
+            double salFunc = hrs * valHr;
+            
+            /* Saída */
+
+            Console.WriteLine("\r\nNumero de Funcionario: {0}\r\nValor a receber (salario): {1:F2}",nFunc,salFunc);
+            
+            
+            
+            /* ------ Exercicio 5 ------ */
+            /*  Fazer um programa para ler o código de uma peça 1, o número de peças 1, o valor unitário de cada peça 1,
+             o código de uma peça 2, o número de peças 2 e o valor unitário de cada peça 2. Calcule e mostre o valor
+              a ser pago. */
+
+            /* Entrada */
+            
+            Console.WriteLine("\r\n------ Exercicio 5 ------");
+            Console.WriteLine("Bem vindo ao caixa automatico!");
+            Console.WriteLine("Insira a seguir em ordem, o codigo do produto 1º, a quantidade que sera levada do mesmo e \r\nseu valor unitario (mesma linha): ");
+            string[] vetor = Console.ReadLine().Split(' ');
+            int cod = int.Parse(vetor[0]);
+            int qtd = int.Parse(vetor[1]);
+            double val = double.Parse(vetor[2]);
+
+            Console.WriteLine("Agora, o mesmo para o 2º produto, codigo, quantidade e valor unitario (mesma linha): ");
+            string[] vetor1 = Console.ReadLine().Split(' ');
+            int cod1 = int.Parse(vetor1[0]);
+            int qtd1 = int.Parse(vetor1[1]);
+            double val1 = double.Parse(vetor1[2]);
+            
+            /* Processamento */
+
+            double valProd1 = qtd * val;
+            double valProd2 = qtd1 * val1;
+            double valTotal = valProd1 + valProd2;
+
+            /* Saída */
+
+            Console.WriteLine("\r\nTotal a pagar: R$ {0:F2}",valTotal);
         }
     }
 }
