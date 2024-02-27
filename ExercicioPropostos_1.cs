@@ -102,7 +102,7 @@ namespace CursoDeCsharp
             /* Entrada */
 
             Console.WriteLine("\r\n------ Exercicio 4 ------");
-            Console.WriteLine("Insira a seguir seu numero de funcionario: ");
+            Console.WriteLine("Insira a seguir o seu numero de identificacao de funcionario: ");
             int nFunc = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Agora insira a quantidade de horas trabalhadas nesse mes: ");
@@ -150,7 +150,48 @@ namespace CursoDeCsharp
 
             /* Saída */
 
+            Console.WriteLine(" --- Resumo da compra ---");
+            Console.WriteLine("- 1º Produto\r\nCodigo: {0}\r\nQuantidade: {1}\r\nValor unit.: R$ {2:F2}",cod,qtd,val);
+            Console.WriteLine("- 2º Produto\r\nCodigo: {0}\r\nQuantidade: {1}\r\nValor unit.: R$ {2:F2}",cod1,qtd1,val1);
             Console.WriteLine("\r\nTotal a pagar: R$ {0:F2}",valTotal);
+            
+            
+            
+            /* ------ Exercicio 6 ------ */
+            /* Fazer um programa que leia três valores com ponto flutuante de dupla precisão: A, B e C. Em seguida, calcule e mostre:  
+               a)	a área do triângulo retângulo que tem A por base e C por altura.  
+               b)	a área do círculo de raio C. (pi = 3.14159)  
+               c)	a área do trapézio que tem A e B por bases e C por altura.  
+               d)	a área do quadrado que tem lado B.  
+               e)	a área do retângulo que tem lados A e B.  */
+
+            /* Entrada */
+            
+            Console.WriteLine("\r\n------ Exercicio 6 ------");
+            Console.WriteLine("Insira a seguir tres valores flutuantes (possuem decimais) para que possamos demonstrar\r\ncomo seriam diferente formas geometricas baseadas nos mesmos!");
+            Console.WriteLine("Para isso, digite os tres valores desejados a seguir (mesma linha): ");
+            string[] vetorFormas = Console.ReadLine().Split(' ');
+            double a = double.Parse(vetorFormas[0]);
+            double b = double.Parse(vetorFormas[1]);
+            double c = double.Parse(vetorFormas[2]);
+
+            /* Processamento */
+            
+            double trianRet = a * c / 2;
+
+            double areaCirc = pi * (Math.Pow(c, 2));
+            
+            double areaTrap = (a+b) * c / 2;
+
+            double areaQuad = Math.Pow(b, 2);
+
+            double areaRetan = a * b;
+            
+            /* Saída */
+
+            Console.WriteLine("\r\n --- Resultados ---\r\n- Triangulo: {0:F3}\r\n- Circulo: {1:F3}\r\n- Trapezio: {2:F3}\r\n- Quadrado: {3:F3}\r\n- Retangulo: {4:F3}",trianRet,areaCirc,areaTrap,areaQuad,areaRetan);
+
+
         }
     }
 }
