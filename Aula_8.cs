@@ -1,4 +1,4 @@
-﻿/* ------ Operadores logicos ------ */
+﻿/* ------ Operadores lógicos ------ */
 
 using System;
 
@@ -6,7 +6,7 @@ namespace CursoDeCsharp
 {
     class Aula_8
     {
-        static void Main(string[] arg)
+        static void _Aula8(string[] arg)
         {
             /* Operadores existentes:
              - " && " = ... e ...(para que algo seja verdadeiro, ambas as condições devem verdadeiras)
@@ -41,7 +41,16 @@ namespace CursoDeCsharp
             Console.WriteLine("considerados como verdadeiros pelo operador logico 'e' .");
             
             /* ------ Bônus ------ */
-
+            /* Precedência:
+             Os operadores lógicos contam também com a precedência, ou seja, ao se determinar uma estrutura de código,
+             algumas operações serão realizadas antes que outras à depender de sua precedência.
+             
+             No caso dos operadores lógicos, as mesmas ocorrem da seguinte maneira:
+             1º - ! (not)
+             2º = && (e)
+             3º = || (ou)
+             Abstraindo o conceito, ao executarmos um comando, o operador lógico "!" será resolvido primeiro, e depois será
+             executado o operador "&&", e por fim será executado o operador "||".*/
         }
     }
 }
