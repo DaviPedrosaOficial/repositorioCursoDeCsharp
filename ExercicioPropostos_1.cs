@@ -6,7 +6,7 @@ namespace CursoDeCsharp
 {
     class ExercicioPropostos_1
     {
-        static void Main(string[] arg)
+        static void Ex_Propostos1(string[] arg)
         {
             /* ------ 1º Exercício ------ */
             /* Faça um programa para ler dois valores inteiros, e depois mostrar na tela a soma desses números
