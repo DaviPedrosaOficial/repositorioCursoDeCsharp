@@ -6,7 +6,7 @@ namespace CursoDeCsharp
 {
     class Aula_9
     {
-        static void Main(string[] arg)
+        static void _Aula9(string[] arg)
         {
             /* Estruturas condicionais, como o próprio nome diz, são estruturas que farão algo acontecer, a depender
              das condições predefinidas para ela.
@@ -102,8 +102,23 @@ namespace CursoDeCsharp
                 * Podemos ter inúmeros else if!
              
              Agora, vamos vê-la na prática:     */
-            
-            
+
+            int determinante2 = 30;
+
+            if (determinante2 == 10)
+            {
+                Console.WriteLine("Mais uma vez, a condicional 'if' não sera executada, pois sua condicional não e valida");
+            }
+            else if (determinante2 % 2 == 0)
+            {
+                Console.WriteLine("\r\nEstrutura de encadeamento 'else if' executando a linha, apos verificar a validade de sua condicional!");
+            }
+            else
+            {
+                Console.WriteLine("Nesse caso, como a condicao de encadeamento foi constada, o 'else' tambem nao sera executado");
+            }
+
+
         }
     }
 }
