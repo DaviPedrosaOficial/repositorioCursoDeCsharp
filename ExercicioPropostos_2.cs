@@ -197,6 +197,134 @@ namespace CursoDeCsharp
             {
                 Console.WriteLine("\r\nA duracao do jogo nao pode ser maior que 24 horas!");
             }
+            
+            
+            
+            /* ------ Exercício 5 ------ */
+            /* Com base na tabela abaixo, escreva um programa que leia o código de um item e a quantidade deste item.
+             A seguir, calcule e mostre o valor da conta a pagar. 
+             
+             Tabela:
+             código       Especifição        Preço
+               1         Cachorro quente     R$4,00
+               2            X-Salada         R$4,50
+               3            X-Bacon          R$5,00
+               4         Torrada simples     R$2,00
+               5           Refrigerante      R$2,50       */
+            
+            /* Entrada */
+            Console.WriteLine("\r\n------ Exercicio 5 ------");
+            Console.WriteLine("Insira a seguir o código do produto de sua escolha: ");
+            int cod = int.Parse(Console.ReadLine());
+            Console.WriteLine("Agora insira a quantidade do mesmo que voce deseja levar: ");
+            int qtd = int.Parse(Console.ReadLine());
+
+            double totalPagar = 0;
+            
+            /* Processamento & saída */
+            if (cod < 1 || cod > 5)
+            {
+                Console.WriteLine("\r\nProduto inserido nao encontrado");
+            }
+            else if (cod == 1)
+            {
+                totalPagar = qtd * 4;
+                Console.WriteLine("\r\nProduto escolhido: Cachorro quente\r\nValor uni: R$4,00\r\nQuantidade pedida: {0}\r\nValor a pagar: R${1:F2}",qtd,totalPagar);
+            }
+            else if (cod == 2)
+            {
+                totalPagar = qtd * 4.5;
+                Console.WriteLine("\r\nProduto escolhido: X-Salada\r\nValor uni: R$4,50\r\nQuantidade pedida: {0}\r\nValor a pagar: R${1:F2}",qtd,totalPagar);
+            }
+            else if (cod == 3)
+            {
+                totalPagar = qtd * 5;
+                Console.WriteLine("\r\nProduto escolhido: X-bacon\r\nValor uni: R$5,00\r\nQuantidade pedida: {0}\r\nValor a pagar: R${1:F2}",qtd,totalPagar);
+            }
+            else if (cod == 4)
+            {
+                totalPagar = qtd * 2;
+                Console.WriteLine("\r\nProduto escolhido: Torrada simples\r\nValor uni: R$2,00\r\nQuantidade pedida: {0}\r\nValor a pagar: R${1:F2}",qtd,totalPagar);
+            }
+            else
+            {
+                totalPagar = qtd * 2.5;
+                Console.WriteLine("\r\nProduto escolhido: Refrigerante\r\nValor uni: R$2,50\r\nQuantidade pedida: {0}\r\nValor a pagar: R${1:F2}",qtd,totalPagar);
+            }
+            
+            
+            
+            /* ------ Exercício 6 ------ */
+            /* Você deve fazer um programa que leia um valor qualquer e apresente uma mensagem dizendo em qual dos
+             seguintes intervalos ([0,25], (25,50], (50,75], (75,100]) este valor se encontra. Obviamente se o valor não
+             estiver em nenhum destes intervalos, deverá ser impressa a mensagem “Fora de intervalo”.  */
+            
+            /* Entrada */
+            Console.WriteLine("\r\n------ Exercicio 6 ------");
+            Console.WriteLine("Neste programas verificaremos qual intervalo entre 0 e 100, se localiza um numero de\r\nsua escolha!");
+            Console.WriteLine("Entao para que possamos comeca-lo, insira a seguir um numero de sua escolha: ");
+            int numCliente = int.Parse(Console.ReadLine());
+
+            /* Processamento e saída */
+            if (numCliente < 0 || numCliente > 100)
+            {
+                Console.WriteLine("\r\nValor fora do intervalo 0 - 100.");   
+            }
+            else if (numCliente >= 0 && numCliente <= 25)
+            {
+                Console.WriteLine("\r\nValor se encontra no intervalo entre 0 e 25!");
+            }
+            else if (numCliente > 25 && numCliente <= 50)
+            {
+                Console.WriteLine("\r\nValor se encontra no intervalo entre 25 e 50!");
+            }
+            else if (numCliente > 50 && numCliente <= 75)
+            {
+                Console.WriteLine("\r\nValor se encontra no intervalo entre 50 e 75!");
+            }
+            else
+            {
+                Console.WriteLine("\r\nValor se encontra no intervalo entre 75 e 100!");
+            }
+            
+            
+            
+            /* ------ Exercício 7 ------ */
+            /* Leia 2 valores com uma casa decimal (x e y), que devem representar as coordenadas de um ponto em um
+             plano.
+             A seguir, determine qual o quadrante ao qual pertence o ponto, ou se está sobre um dos eixos cartesianos ou
+             na origem (x = y = 0). 
+ 
+             Se o ponto estiver na origem, escreva a mensagem “Origem”. 
+ 
+             Se o ponto estiver sobre um dos eixos escreva “Eixo X” ou “Eixo Y”, conforme for a situação. 	 */
+            
+            /* Entrada */
+            Console.WriteLine("\r\n------ Exercicio 7 ------");
+            Console.WriteLine("Nesse programa determinaremos o quadrante em que se localiza um ponto escolhido por voce!");
+            Console.WriteLine("Para comecarmos, insira a seguir as cordenadas do seu ponto da seguinte forma 'x y',");
+            Console.WriteLine("separadas por espaco e com 1 casa decimal:");
+            string[] vetor = Console.ReadLine().Split(' ');
+
+            double x = double.Parse(vetor[0]);
+            double y = double.Parse(vetor[1]);
+
+            if (x == 0 && y == 0)
+            {
+                Console.WriteLine("O ponto se localiza na 'Origem'!");
+            }
+            else if (x == 0)
+            {
+                Console.WriteLine("O ponto se encontra no eixo 'X', na coordenada {0:F1} em Y",y); 
+            }
+            else if (y == 0)
+            {
+                Console.WriteLine("O ponto se encontra no eixo 'Y' na coordenada {0:F1} em Y",y);
+            }
+            else if (x > 0 && y > 0)
+            {
+                Console.WriteLine("O ponto se localiza no quadrante 'Q1'!");
+            }
         }
     }
 }
