@@ -1,13 +1,41 @@
-﻿using System;
+﻿/* ------ Funções (sintaxe) ------ */
+
+using System;
 
 namespace CursoDeCsharp
 {
-    class test
+    class Aula_11
     {
-        static void Main(string[] arg)
+        static void _Aula11(string[] arg)
         {
-            /* Hub de teste */
+            /* O que são funções e para que elas servem?
+             
+             * Funções representam um processamento que tem um significado, seja esse parte de uma biblioteca, ou uma
+             função feita por nos mesmos.
+             
+             Exemplos de funções de biblioteca:
+             - Math.sqrt(double) (retorna a raiz quadrada de um valor de sua escolha)
+             - Console.WriteLine(string) (printa uma informação no terminal, ou programa)
+             
+             Exemplo de possíveis funções que podemos desenvolver:
+             - CalculoImpRenda (salárioFuncionario) (função para retornar o imposto de renda a parir do salário do funcionário)
+             - CalculoSalário (horasTrabalhadas, valorHora) (função para retornar o valor que um funcionário deve receber) 
+             
+             * Principais vantagens de se utilizar funções:
+             - Modularização (Dividir o seus programas em partes menores, o tornado mais limpo e eficiente)
+             - Delegação (Permite delegar o processamento de um processo a uma parte específica do programa, o tornando mais
+             simples)
+             - Reaproveitamento (Nos permite reaproveitar processos, economizando tempo e linhas em nosso programa)
+             
+             * Dados de entrada e saída
+             - As funções podem receber dados de entrada, tendo assim uma acertividade maior sobre o que a mesma deverá
+             utilizar como parâmetro ou argumento para ser executada.
+             - As funções podem ou não retornar uma saída, ao depender do que esperamos da mesma.
+             
+             * Observação: Ao trabalharmos com orientação a objetos, funções em classses recebem o nome de "Metodos". */
             
+            /* ------ Demonstrando a utilização de funções -----*/
+
             Console.WriteLine("Insira a seguir tres numeros inteiros, para que possamos averiguar qual deles e o maior");
             Console.WriteLine("Insira o primeiro numero: ");
             int n1 = int.Parse(Console.ReadLine());
@@ -69,5 +97,4 @@ namespace CursoDeCsharp
         }
     }
 }
-
 
