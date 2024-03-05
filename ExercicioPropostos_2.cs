@@ -7,7 +7,7 @@ namespace CursoDeCsharp
 {
     class ExercicioPropostos_2
     {
-        static void ExProp(string[] arg)
+        static void Ex_Propostos2(string[] arg)
         {
             /* ------ 1º Exercício ------ */
             /* Fazer um programa para ler um número inteiro, e depois dizer se este número é negativo ou não. */
