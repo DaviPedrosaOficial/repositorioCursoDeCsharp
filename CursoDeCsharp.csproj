@@ -10,14 +10,17 @@
 
     <ItemGroup>
       <Compile Remove="Exercicio_2\**" />
+      <Compile Remove="CursoDeCsharp2\**" />
     </ItemGroup>
 
     <ItemGroup>
       <EmbeddedResource Remove="Exercicio_2\**" />
+      <EmbeddedResource Remove="CursoDeCsharp2\**" />
     </ItemGroup>
 
     <ItemGroup>
       <None Remove="Exercicio_2\**" />
+      <None Remove="CursoDeCsharp2\**" />
     </ItemGroup>
 
 </Project>

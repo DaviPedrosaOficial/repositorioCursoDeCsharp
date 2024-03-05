@@ -10,7 +10,7 @@ namespace CursoDeCsharp
         {
             /* O que é a estrutura while?
              
-              A estrutura while nada mais é do que um loop onde o mesmo será executado enquanto sua condicional for verdade
+              A estrutura while nada mais é do que um loop onde o mesmo será executado enquanto sua condicional for verdadeira
              e assim que a mesma se tornar falsa o mesmo se encerrará!
               É interessante salientarmos que sua estrutura é bem semelhante a das estruturas condicionais, tendo como 
              parâmetro uma condicional que determinará se deverá ou não ser executado, e os comandos dentro de seu escopo
