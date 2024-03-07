@@ -66,6 +66,71 @@ namespace CursoDeCsharp
 
             Console.WriteLine("\r\nBaseado nos numeros inseridos, {0} estao dentro do intervalo entre 10 e 20,\r\ne {1} estao fora do intervalo!",dentro,fora);
             
+            
+            
+            
+            /* ------ Exercício 3 ------ */
+            /* Leia 1 valor inteiro N, que representa o número de casos de teste que vem a seguir.
+             Cada caso de teste consiste de 3 valores reais, cada um deles com uma casa decimal. 
+             Apresente a média ponderada para cada um destes conjuntos de 3 valores, sendo que o primeiro valor tem
+             peso 2, o segundo valor tem peso 3 e o terceiro valor tem peso 5.  */
+
+            /* Entrada */
+            Console.WriteLine("\r\n------ Exercicio 3 ------");
+            Console.WriteLine("Bem vindo ao calculador de notas, um programa para auxiliar os professores de todo o Brasil!");
+            Console.Write("Insira a seguir a quantidade de alunos que calcularemos suas medias baseado nas notas das 3 provas: ");
+            int qtdAlu = int.Parse(Console.ReadLine());
+
+            /* Processamento & saída */
+            for (int i = 1; i <= qtdAlu; i++)
+            {
+                Console.Write("Insira a seguir a 1ª nota do {0}º aluno: ",i);
+                double nota_1 = double.Parse(Console.ReadLine());
+
+                Console.Write("Insira a seguir a 2ª nota do {0} aluno: ",i);
+                double nota_2 = double.Parse(Console.ReadLine());
+
+                Console.Write("Insira a seguir a 3ª nota do {0} aluno: ",i);
+                double nota_3 = double.Parse(Console.ReadLine());
+
+                double media = (nota_1 * 2 + nota_2 * 3 + nota_3 * 5) / 10;
+                Console.Write("Media do {0}º aluno: {1:F1}",i,media);
+            }
+            
+            
+            
+            
+            /* ------ Exercício 4 ------ */
+            /*  Fazer um programa para ler um número N. Depois leia N pares de números e mostre a divisão do primeiro
+             pelo segundo. Se o denominador for igual a zero, mostrar a mensagem "divisao impossivel".         */
+
+            Console.WriteLine("\r\n------ Exercicio 4 ------");
+            Console.Write("Bem vindo ao programa de divisao!\r\nInsira a seguir a quantidade de divisoes que deseja executar: ");
+            int qtdDiv = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= qtdDiv; i++)
+            {
+                Console.Write("Insira a seguir o dividendo da {0}ª divisao: ",i);
+                double dividendo = double.Parse(Console.ReadLine());
+
+                Console.Write("Agora o divisor: ");
+                double divisor = double.Parse(Console.ReadLine());
+
+                if (divisor == 0)
+                {
+                    Console.WriteLine("Divisao impossivel!");
+                }
+                else
+                {
+                    double divisao = dividendo / divisor;
+                    Console.WriteLine("A divisao entre {0} e {1} resultam em: {2:F1}",dividendo,divisor,divisao);
+                }
+            }
+            
+            
+            
+            
+            /*  */
         }
     }
 }

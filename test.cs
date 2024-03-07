@@ -8,33 +8,28 @@ namespace CursoDeCsharp
         {
             /* Hub de teste */
 
-            Console.WriteLine("\r\n------ Exercicio 2 ------");
-            Console.WriteLine("Bem vindo ao identificador de intervalos!");
-            Console.WriteLine("Insira a seguir a quantidade de numeros inteiros, na qual voce ira efetuar a verificacao");
-            Console.Write("se os mesmos fazem ou nao parte do intervalo entre 10 e 20: ");
-            int qtdNum = int.Parse(Console.ReadLine());
+            Console.WriteLine("\r\n------ Exercicio 4 ------");
+            Console.Write("Bem vindo ao programa de divisao!\r\nInsira a seguir a quantidade de divisoes que deseja executar: ");
+            int qtdDiv = int.Parse(Console.ReadLine());
 
-            int dentro = 0;
-            int fora = 0;
-            
-            /* Processamento */
-            for (int i = 1; i <= qtdNum; i++)
+            for (int i = 1; i <= qtdDiv; i++)
             {
-                Console.Write("Insira o {0}º numero: ",i);
-                int verif = int.Parse(Console.ReadLine());
+                Console.Write("Insira a seguir o dividendo da {0}ª divisao: ",i);
+                double dividendo = double.Parse(Console.ReadLine());
 
-                if (verif < 10 || verif > 20)
+                Console.Write("Agora o divisor: ");
+                double divisor = double.Parse(Console.ReadLine());
+
+                if (divisor == 0)
                 {
-                    fora += 1;
+                    Console.WriteLine("Divisao impossivel!");
                 }
                 else
                 {
-                    dentro += 1;
+                    double divisao = dividendo / divisor;
+                    Console.WriteLine("A divisao entre {0} e {1} resultam em: {2:F1}",dividendo,divisor,divisao);
                 }
             }
-
-            Console.WriteLine("\r\nBaseado nos numeros inseridos, {0} esta(o) dentro do intervalo entre 10 e 20,\r\ne {1} esta(o) fora do intervalo!",dentro,fora);
-
         }
     }
 }
