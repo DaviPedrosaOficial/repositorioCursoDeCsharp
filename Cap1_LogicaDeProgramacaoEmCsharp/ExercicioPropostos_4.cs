@@ -104,10 +104,12 @@ namespace CursoDeCsharp
             /*  Fazer um programa para ler um número N. Depois leia N pares de números e mostre a divisão do primeiro
              pelo segundo. Se o denominador for igual a zero, mostrar a mensagem "divisao impossivel".         */
 
+            /* Entrada */
             Console.WriteLine("\r\n------ Exercicio 4 ------");
             Console.Write("Bem vindo ao programa de divisao!\r\nInsira a seguir a quantidade de divisoes que deseja executar: ");
             int qtdDiv = int.Parse(Console.ReadLine());
 
+            /* Processamento & saída */
             for (int i = 1; i <= qtdDiv; i++)
             {
                 Console.Write("Insira a seguir o dividendo da {0}ª divisao: ",i);
@@ -130,7 +132,64 @@ namespace CursoDeCsharp
             
             
             
-            /*  */
+            /* ------ Exercício 5 ------ */
+            /* Ler um valor N. Calcular e escrever seu respectivo fatorial. Fatorial de N = N * (N-1) * (N-2) * (N-3) * ... * 1.
+             Lembrando que, por definição, fatorial de 0 é 1.  */
+
+            /* Entrada */
+            Console.WriteLine("\r\n------ Exercício 5 ------");
+            Console.WriteLine("Bem vindo ao calculador de fatorial!");
+            Console.Write("Insira a seguir o numero que voce deseja encontrar seu fatorial: ");
+            int fatCliente = int.Parse(Console.ReadLine());
+            int fatoracao = 1;
+
+            /* Processamento & saída */
+            for (int i = 1; i <= fatCliente; i++)
+            {
+                fatoracao *= i;
+            }
+            Console.WriteLine("O fatorial de {0} é {1} !",fatCliente,fatoracao);
+            
+            
+            
+            
+            /* ------ Exercício 6 ------ */
+            /* Ler um número inteiro N e calcular todos os seus divisores. */
+            
+            /* Entrada */
+            Console.WriteLine("\r\n------ Exercicio 6 ------");
+            Console.WriteLine("Bem vindo ao descobridor de divisores!");
+            Console.WriteLine("Neste programa, descobriremos os divisores de um numero passado por voces!");
+            Console.Write("Insira a seguir o numero que voce deseja que encontremos seus divisores: ");
+            int numDiv = int.Parse(Console.ReadLine());
+
+            Console.Write("Os divisores de {0} são: ",numDiv);
+            for (int i = 1; i <= numDiv; i++)
+            {
+                if (numDiv % i == 0)
+                {
+                    Console.Write(" {0} ",i);
+                }
+            }
+            
+            
+            
+            
+            /* ------ Exercício 7 ------ */
+            /* Fazer um programa para ler um número inteiro positivo N. O programa deve então mostrar na tela N linhas,
+             começando de 1 até N. Para cada linha, mostrar o número da linha, depois o quadrado e o cubo do valor, 
+             conforme exemplo. */
+            
+            /* Entrada */
+            Console.WriteLine("\r\n------ Exercicio 7 ------");
+            Console.Write("Insira a seguir um numero inteiro positivo para que possamos transformá-lo: ");
+            int numLinhas = int.Parse(Console.ReadLine());
+            
+            /* Processamento e saída */
+            for (int i = 1; i <= numLinhas; i++)
+            {
+                Console.WriteLine("{0} {1} {2}",i , Math.Pow(i,2), Math.Pow(i,3));
+            }
         }
     }
 }

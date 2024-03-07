@@ -8,27 +8,14 @@ namespace CursoDeCsharp
         {
             /* Hub de teste */
 
-            Console.WriteLine("\r\n------ Exercicio 4 ------");
-            Console.Write("Bem vindo ao programa de divisao!\r\nInsira a seguir a quantidade de divisoes que deseja executar: ");
-            int qtdDiv = int.Parse(Console.ReadLine());
-
-            for (int i = 1; i <= qtdDiv; i++)
+            Console.WriteLine("\r\n------ Exercicio 7 ------");
+            Console.Write("Insira a seguir um numero inteiro positivo para que possamos transformá-lo: ");
+            int numLinhas = int.Parse(Console.ReadLine());
+            
+            /* Processamento e saída */
+            for (int i = 1; i <= numLinhas; i++)
             {
-                Console.Write("Insira a seguir o dividendo da {0}ª divisao: ",i);
-                double dividendo = double.Parse(Console.ReadLine());
-
-                Console.Write("Agora o divisor: ");
-                double divisor = double.Parse(Console.ReadLine());
-
-                if (divisor == 0)
-                {
-                    Console.WriteLine("Divisao impossivel!");
-                }
-                else
-                {
-                    double divisao = dividendo / divisor;
-                    Console.WriteLine("A divisao entre {0} e {1} resultam em: {2:F1}",dividendo,divisor,divisao);
-                }
+                Console.WriteLine("{0} {1} {2}",i , Math.Pow(i,2), Math.Pow(i,3));
             }
         }
     }
