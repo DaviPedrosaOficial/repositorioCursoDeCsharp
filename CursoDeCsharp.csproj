@@ -11,7 +11,6 @@
     <ItemGroup>
       <Compile Remove="Exercicio_2\**" />
       <Compile Remove="CursoDeCsharp2\**" />
-      <Compile Remove="Cap2_ClassesAtributosMetodosMembrosEstaticos\Aula3.cs" />
     </ItemGroup>
 
     <ItemGroup>
