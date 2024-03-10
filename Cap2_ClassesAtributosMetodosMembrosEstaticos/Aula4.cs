@@ -1,19 +1,24 @@
-﻿using System;
+﻿/* ------ Começando a resolver um segundo problema exemplo ------ */
+
+using System;
 
 namespace CursoDeCsharp
 {
-    class test
+    class Aula4
     {
-        static void Main(string[] arg)
+        static void _Aula4(string[] arg)
         {
-            /* Hub de teste */
+            /* Fazer um programa para ler os dados de um produto em estoque (nome, preço e quantidade no estoque).
+             Em seguida:
+            - Mostrar os dados do produto (nome, preço, quantidade no estoque, valor total no estoque)
+            - Realizar uma entrada no estoque e mostrar novamente os dados do produto
+            - Realizar uma saída no estoque e mostrar novamente os dados do produto   */
 
-int controlador = 1;
             List<Produto> estoque = new List<Produto>();
 
             Console.WriteLine("Bem vindo ao programa de estoque do atacadao XP");
 
-            while (controlador == 1)
+            while (true)
             {
                 Console.WriteLine("Digite 1 para adicionar um produto");
                 Console.WriteLine("Digite 2 para conferir o total em estoque de algum produto");
@@ -62,7 +67,7 @@ int controlador = 1;
                         {
                             Console.Write("\r\n{0} encontrado(a), agora insira a quantidade que deseja adicionar ao estoque do mesmo: ",produto.Nome);
                             produto.AdicionarProdutos(int.Parse(Console.ReadLine()));
-                            Console.WriteLine("\r\nQuantia adicionada!");
+                            Console.WriteLine("Quantia adicionada!\r\n");
                         }
                     }
                 }
@@ -77,14 +82,14 @@ int controlador = 1;
                         {
                             Console.Write("\r\n{0} encontrado(a), agora insira a quantidade que deseja adicionar ao estoque do mesmo: ",produto.Nome);
                             produto.RemoverProdutos(int.Parse(Console.ReadLine()));
-                            Console.WriteLine("\r\nQuantia retirada!");
+                            Console.WriteLine("Quantia retirada!\r\n");
                         }
                     }
                 }
                 else if (controleEntrada == 5)
                 {
                     Console.WriteLine("\r\nO programa sera encerrado!");
-                    controlador -= 0;
+                    break;
                 }
                 else
                 {
@@ -94,5 +99,3 @@ int controlador = 1;
         }
     }
 }
-
-
