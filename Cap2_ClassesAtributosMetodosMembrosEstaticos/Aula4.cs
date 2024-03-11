@@ -20,11 +20,11 @@ namespace CursoDeCsharp
 
             while (true)
             {
-                Console.WriteLine("Digite 1 para adicionar um produto");
+                Console.WriteLine("\r\nDigite 1 para adicionar um produto");
                 Console.WriteLine("Digite 2 para conferir o total em estoque de algum produto");
                 Console.WriteLine("Digite 3 para adicionar uma quantidade ao estoque de algum produto");
                 Console.WriteLine("Digite 4 para remover uma quantidade ao estoque de algum produto");
-                Console.WriteLine("Digite 5 para encerrar o programa");
+                Console.WriteLine("Digite 5 para encerrar o programa\r\n");
                 Console.Write("Insira a seguir o numero correspondente a ação que voce deseja: ");
                 int controleEntrada = int.Parse(Console.ReadLine());
 
