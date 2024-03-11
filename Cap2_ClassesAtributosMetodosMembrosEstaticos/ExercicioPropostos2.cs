@@ -1,12 +1,17 @@
-﻿using System;
+﻿/* ------ Exercícios propostos 2 ------ */
+
+using System;
 
 namespace CursoDeCsharp
 {
-    class test
+    class ExercicioPropostos2
     {
-        static void Main(string[] arg)
+        static void Ex_Propostos2(string[] arg)
         {
-            /* Hub de teste */
+            /* ------ Exercício 1 ------ */
+            /* Fazer um programa para ler os valores da largura e altura de um retângulo. Em seguida, mostrar na tela o
+             valor de sua área, perímetro e diagonal. Usar uma classe para o retângulo.               */
+
             Retangulo x = new Retangulo();
 
             Console.WriteLine("Bem vindo ao calculador de retangulos!");
@@ -19,5 +24,3 @@ namespace CursoDeCsharp
         }
     }
 }
-
-
