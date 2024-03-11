@@ -31,9 +31,20 @@ namespace CursoDeCsharp
              o mesmo retornará o que foi predefinido em nossa classe, dentro da função ToString.
              
              Entendemos que pode parecer abstrato, então vamos demonstrar na prática, utilizando a classe Carro para nos
-             auxiliar: 
-             
-             */
+             auxiliar:                                                                                                */
+
+            Console.WriteLine("Agora demonstraremos, como funciona o metodo ToString!");
+            Console.WriteLine("Veja a seguir:");
+
+            Carro corola = new Carro();
+
+            corola.Modelo = "Corola";
+            corola.Marca = "Toyota";
+            corola.Ano = 2024;
+
+            Console.WriteLine(corola);
+            /* Repare que so de pedirmos para o objeto "corola" ser printado no terminal, sem a necessidade de colocarmos
+             a nomenclatura de método ToString, o compilador já executou o método, e executou o que foi declarado no mesmo.*/
         }
     }
 }

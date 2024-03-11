@@ -20,6 +20,7 @@ namespace CursoDeCsharp
 
             while (true)
             {
+                /* Entrada */
                 Console.WriteLine("\r\nDigite 1 para adicionar um produto");
                 Console.WriteLine("Digite 2 para conferir o total em estoque de algum produto");
                 Console.WriteLine("Digite 3 para adicionar uma quantidade ao estoque de algum produto");
@@ -28,6 +29,7 @@ namespace CursoDeCsharp
                 Console.Write("Insira a seguir o numero correspondente a ação que voce deseja: ");
                 int controleEntrada = int.Parse(Console.ReadLine());
 
+                /* Esruturas condicionais que direcionarão o decorrimento do loop */
                 if (controleEntrada == 1)
                 {
                     Produto novoProduto = new Produto();

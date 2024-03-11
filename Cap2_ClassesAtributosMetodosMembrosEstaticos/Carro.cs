@@ -2,8 +2,17 @@
 
 public class Carro
 {
-    public int ano;
-    public string marca;
-    public string modelo;
-    
+    public int Ano;
+    public string Marca;
+    public string Modelo;
+
+    public override string ToString()
+    {
+        return "Carro da Marca: "
+               + Marca
+               + "\r\nModelo: "
+               + Modelo
+               + "\r\nAno: "
+               + Ano;
+    }
 }
