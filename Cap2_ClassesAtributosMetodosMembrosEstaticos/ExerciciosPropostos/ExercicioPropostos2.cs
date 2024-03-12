@@ -58,6 +58,33 @@ namespace CursoDeCsharp
 
             Console.WriteLine("\r\nAumento concedido!");
             Console.WriteLine("Dados atualizados: {0}",funcionario);
+            
+            
+            
+            /* ------ Exercício 3 ------ */
+            /* Fazer um programa para ler o nome de um aluno e as três notas que ele obteve nos três trimestres do ano
+            (primeiro trimestre vale 30 e o segundo e terceiro valem 35 cada). Ao final, mostrar qual a nota final do 
+            aluno no ano. Dizer também se o aluno está APROVADO ou REPROVADO e, em caso negativo, quantos pontos faltam
+            para o aluno obter o mínimo para ser aprovado (que é 60 pontos). Você deve criar uma classe Aluno para
+            resolver este problema.                                                                                   */
+
+            Aluno aluno = new Aluno();
+            
+            Console.WriteLine("------ Exercicio 3 ------");
+            Console.WriteLine("Bem vindo ao calculador de media!");
+            
+            Console.Write("Insira a seguir a nota tirada no primeiro semestre (ate 30 pontos): ");
+            aluno.PrimeiroSemestre = double.Parse(Console.ReadLine());
+
+            Console.Write("Agora, insira a nota tirada no segundo semestre (ate 35 pontos): ");
+            aluno.SegundoSemestre = double.Parse(Console.ReadLine());
+
+            Console.Write("E para finalizarmos, insira a nota tirada no terceiro semestre (ate 35 pontos): ");
+            aluno.TerceiroSemestre = double.Parse(Console.ReadLine());
+
+            Console.WriteLine();
+            Console.WriteLine(aluno);
+
         }
     }
 }
