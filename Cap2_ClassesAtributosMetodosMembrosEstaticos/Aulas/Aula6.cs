@@ -1,4 +1,4 @@
-﻿/* ------ Membros estáticos ------*/
+﻿/* ------ Membros estáticos (parte 1) ------*/
 
 namespace CursoDeCsharp
 {

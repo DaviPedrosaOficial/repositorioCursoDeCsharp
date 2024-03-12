@@ -7,22 +7,31 @@ namespace CursoDeCsharp
         static void Main(string[] arg)
         {
             /* Hub de teste */
-            Aluno aluno = new Aluno();
+            Console.WriteLine("Bem vindo ao calculador de esferas!");
             
-            Console.WriteLine("------ Exercicio 3 ------");
-            Console.WriteLine("Bem vindo ao calculador de media!");
-            
-            Console.Write("Insira a seguir a nota tirada no primeiro semestre (ate 30 pontos): ");
-            aluno.PrimeiroSemestre = double.Parse(Console.ReadLine());
+            Console.Write("Insira a seguir o valor no qual voce desejaria tem como raio de sua esfera: ");
+            double raio = double.Parse(Console.ReadLine());
 
-            Console.Write("Agora, insira a nota tirada no segundo semestre (ate 35 pontos): ");
-            aluno.SegundoSemestre = double.Parse(Console.ReadLine());
+            /* Armazenando dados de nossos membros estáticos */
+            double circ = Circunferencia(raio);
+            double vol = Volume(raio);
 
-            Console.Write("E para finalizarmos, insira a nota tirada no terceiro semestre (ate 35 pontos): ");
-            aluno.TerceiroSemestre = double.Parse(Console.ReadLine());
+            Console.WriteLine("Circunferencia: {0:F2}",circ);
+            Console.WriteLine("Volume: {0:F2}",vol);
+            Console.WriteLine("Valor de Pi: {0:F2}",Pi);
+        }
+        static double Pi = 3.14;
 
-            Console.WriteLine();
-            Console.WriteLine(aluno);
+        /* Repare que como utilizaremos as funções estáticas dentro de uma classe estática, temos de colocar a nomenclatura
+         static na frente da definição, para que as mesmas possam ser utilizadas em nosso programa! */
+        static double Circunferencia(double r)
+        {
+            return 2.0 * Pi * r;
+        }
+
+        static double Volume(double r)
+        {
+            return 4.0 / 3.0 * Pi * Math.Pow(r, 3);
         }
     }
 }
