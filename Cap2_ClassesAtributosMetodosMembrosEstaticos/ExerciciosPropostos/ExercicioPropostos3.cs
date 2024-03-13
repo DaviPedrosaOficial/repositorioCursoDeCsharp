@@ -1,12 +1,15 @@
-﻿using System;
+﻿/* ------ Exercícios propostos 3 ------ */
 
 namespace CursoDeCsharp
 {
-    class test
+    class ExercicioPropostos3
     {
-        static void Main(string[] arg)
+        static void Ex_Propostos3(string[] arg)
         {
-            /* Hub de teste */
+            /* Faça um programa para ler a cotação do dólar, e depois um valor em dólares a ser comprado por uma pessoa
+            em reais. Informar quantos reais a pessoa vai pagar pelos dólares, considerando ainda que a pessoa terá que
+            pagar 6% de IOF sobre o valor em dólar. Criar uma classe ConversorDeMoeda para ser responsável pelos cálculos. */
+
             Console.Write("Insira a seguir a cotacao do dolar: ");
             double cotacao = double.Parse(Console.ReadLine());
 
@@ -18,5 +21,4 @@ namespace CursoDeCsharp
         }
     }
 }
-
 
