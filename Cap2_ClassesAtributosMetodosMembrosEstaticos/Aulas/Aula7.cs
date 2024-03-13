@@ -32,14 +32,31 @@ namespace CursoDeCsharp
             Console.WriteLine(circ2);
 
             Console.WriteLine();
-            Console.WriteLine(vol1); /* Os resultados serão os mesmos!*/
-            Console.WriteLine(vol2);
+            Console.WriteLine(vol1.ToString("F2")); /* Os resultados serão os mesmos!*/
+            Console.WriteLine(vol2.ToString("F2"));
+            
+            
             
             /* Sendo assim, concluimos que nesse tipo de situação não é interessante trabalhar com objetos, já que ao serem
              implementados, não teremos um benefício sobre os mesmos.
+             Isso ocorre, devido ao fato de tais operações que estão sendo desenvolvidas na classe são estáticas, ou seja,
+             independente de qual objeto que à utilirá, seu resultado será o mesmo.
              
-             Então como faríamos o mesmo?
-             */
+             Então como faríamos o mesmo?                                                                             */
+            
+            /* Para isso, utilizaremos os membros estáticos de uma maneira similar a função Math.Sqrt.
+             Ou seja, ao chamarmos a classe, poderemos utilizar de suas funções sem termos que criar objetos da mesma.
+             
+             Veja a seguir (Classe CalculadoraEstatica) :*/
+            
+            /* Note que não tivemos de instanciar nenhum objeto para utilizarmos os métodos da classe CalculadoraEstatica */
+            double circ3 = CalculadoraEstatica.Circunferencia(3.0);
+            double vol3 = CalculadoraEstatica.Volume(3.0);
+
+            Console.Write("Circunferencia de uma esfera de raio 3,0: ");
+            Console.WriteLine(circ3);
+            Console.Write("Volume de uma esfera de raio 3,0: ");
+            Console.WriteLine(vol3.ToString("F2"));
         }
     }
 }
