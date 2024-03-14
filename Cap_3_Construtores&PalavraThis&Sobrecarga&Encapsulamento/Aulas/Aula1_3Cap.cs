@@ -6,7 +6,7 @@ namespace CursoDeCsharp
         
         static void _Aula1_3Cap(string[] arg)
         {
-            /* O que são contrutores?
+            /* ------ O que são contrutores? ------
              
              Construtores são operações especiais de uma classe, onde são executados logo em seu instanciamento!
              
