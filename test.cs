@@ -7,22 +7,27 @@ namespace CursoDeCsharp
         static void Main(string[] arg)
         {
             /* Hub de teste */
-            Console.Write("Insira a seguir o modelo da moto: ");
-            string modelo = Console.ReadLine();
+            Produto2 pera = new Produto2();
+           
+            /* Instanciando com todos os atributos */
+            Produto2 abacaxi = new Produto2("Abacaxi",3.90,10);
+           
+            /* Instanciando com apenas nome e preço */
+            Produto2 uva = new Produto2("Uva",2.90);
+           
+            /* Como esperado, após criarmos, as sobrecargas em nossa classe, todas as instanciações que lá foram delcaradas
+             estão funcionando, e permitindo que instanciemos nosso objeto da maneira que acharmos melhor.
 
-            Console.Write("Agora, insira a marca da mesma: ");
-            string marca = Console.ReadLine();
+             Para vermos a diferença do resultado de cada uma, vamos chamar nossa função ToString, para printá-los em nossos
+             terminais.  */
 
-            Console.Write("E para finalizarmos insira o ano da mesma: ");
-            int ano = int.Parse(Console.ReadLine());
-            
-            /* Repare que so criaremos instanciaremos o objeto agora, já que para fazer o mesmo necessitamos informar seus
-             construtores!                                                                                            */
-
-            Moto moto = new Moto(modelo,marca,ano);
-
+            Console.WriteLine(pera);
             Console.WriteLine();
-            Console.WriteLine(moto);
+
+            Console.WriteLine(abacaxi);
+            Console.WriteLine();
+
+            Console.WriteLine(uva);
         }
     }
 }
