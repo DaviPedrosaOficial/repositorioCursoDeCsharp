@@ -26,7 +26,7 @@ namespace CursoDeCsharp
 
             for (int i = 1; i <= numDeHardwares; i++)
             {
-                Console.Write("Insira a seguir o tipo do hardware: ");
+                Console.Write("Insira a seguir o tipo do {0}º hardware: ",i);
                 string tipo = Console.ReadLine();
 
                 Console.Write("Insira a seguir o modelo do mesmo: ");
@@ -46,14 +46,16 @@ namespace CursoDeCsharp
 
             while (true)
             {
+                Console.WriteLine();
                 Console.WriteLine("Deseja fazer alguma mudança em algum produto, ou demonstrar alguma informacao produto\r\nem estoque?");
                 Console.WriteLine("Insira 1 para fechar o programa");
                 Console.WriteLine("Insira 2 para alterar um dos atributos do produto desejado");
                 Console.WriteLine("Insira 3 para demonstra a alguma informacao de um dos produtos");
+                Console.WriteLine("Insira 4 para ver todos os hardwares em estoque com seus atributos");
                 Console.Write("Insira a seguir o numero correspondente ao seu desejo: ");
                 int controle = int.Parse(Console.ReadLine());
 
-                if (controle < 1 || controle > 3)
+                if (controle < 1 || controle > 4)
                 {
                     Console.WriteLine("\r\nNumero inserido invalido, tente novamente");
                 }
@@ -76,10 +78,11 @@ namespace CursoDeCsharp
                             Console.Write("Agora insira qual atributo voce deseja alterar (tipo, modelo, marca ou preco): ");
                             string atributo = Console.ReadLine().ToLower();
 
-                            if (atributo != "tipo" || atributo != "modelo" || atributo != "marca" ||
+                            if (atributo != "tipo" && atributo != "modelo" && atributo != "marca" &&
                                 atributo != "preco")
                             {
                                 Console.WriteLine("\r\nAtributo inserido invalido, tente novamente");
+                                Console.WriteLine();
                             }
                             else
                             {
@@ -88,6 +91,8 @@ namespace CursoDeCsharp
                                     Console.Write("\r\nInsira qual o novo tipo que voce deseja: ");
                                     string novoTipo = Console.ReadLine();
                                     
+                                    /* Repare que para, mudarmos um atributo tivemos que chamar o método, e ao invés de
+                                     inserí-lo diretamente ao atributo*/
                                     hardware.SetTipo(novoTipo);
 
                                     Console.WriteLine("\r\nTipo alterado!");
@@ -126,8 +131,65 @@ namespace CursoDeCsharp
                     }
                     
                 }
-            }
+                
+                else if (controle == 3)
+                {
+                    Console.Write("\r\nInsira o modelo do produto que voce deseja alterar algum atributo: ");
+                    string modeloHardware = Console.ReadLine();
 
+                    foreach (var hardware in estoqueDeHardware)
+                    {
+                        if (hardware.GetModelo() == modeloHardware)
+                        {
+                            Console.WriteLine("\r\nProduto encontrado!");
+                            Console.Write("Agora insira qual atributo voce deseja visualizar (tipo, modelo, marca ou preco): ");
+                            string atributo = Console.ReadLine().ToLower();
+
+                            if (atributo != "tipo" && atributo != "modelo" && atributo != "marca" &&
+                                atributo != "preco")
+                            {
+                                Console.WriteLine("\r\nAtributo inserido invalido, tente novamente");
+                                Console.WriteLine();
+                            }
+                            else
+                            {
+                                if (atributo == "tipo")
+                                {
+                                    /* Repare que para, visualizarmos um atributo tivemos que chamar o método, que
+                                     retorna o mesmo, já que não seria possível fazer o mesmo somente colocando o 
+                                     objeto.Atributo */
+                                    Console.WriteLine("\r\nTIPO: {0}", hardware.GetTipo());
+                                }
+                                else if (atributo == "modelo")
+                                {
+                                    Console.WriteLine("\r\nMODELO: {0}", hardware.GetModelo());
+                                }
+                                
+                                else if (atributo == "marca")
+                                {
+                                    Console.WriteLine("\r\nMARCA: {0}", hardware.GetMarca());
+                                }
+                                
+                                else
+                                {
+                                    Console.WriteLine("\r\nPRECO: {0:F2}", hardware.GetPreco());
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("\r\n---------- Estoque de Hardwares ----------");
+                    Console.WriteLine();
+                    
+                    foreach (var hardware in estoqueDeHardware)
+                    {
+                        
+                        Console.WriteLine(hardware);
+                    }
+                }
+            }
         }
     }
 }
