@@ -5,7 +5,7 @@ using System.Threading.Channels;
 
 namespace CursoDeCsharp
 {
-    class Aula2_3Cap
+    class Aula2_Cap3
     {
           static void _Aula2_Cap3(string[] arg)
           {

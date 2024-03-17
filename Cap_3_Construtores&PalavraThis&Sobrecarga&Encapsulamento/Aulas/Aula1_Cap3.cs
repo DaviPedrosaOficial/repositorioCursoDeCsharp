@@ -2,7 +2,7 @@
 
 namespace CursoDeCsharp
 {
-    class Aula1_3Cap{
+    class Aula1_Cap3{
         
         static void _Aula1_3Cap(string[] arg)
         {
