@@ -4,7 +4,7 @@ using System;
 
 namespace CursoDeCsharp
 {
-    class Aula_2
+    class Aula2_Cap1
     {
         static void _2Aula(string[] arg)
         {

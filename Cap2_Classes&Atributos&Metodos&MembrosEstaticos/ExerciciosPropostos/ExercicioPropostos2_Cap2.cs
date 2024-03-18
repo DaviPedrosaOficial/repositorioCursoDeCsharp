@@ -5,7 +5,7 @@ using System.Threading.Channels;
 
 namespace CursoDeCsharp
 {
-    class ExercicioPropostos2
+    class ExercicioPropostos2_Cap2
     {
         static void Ex_Propostos2(string[] arg)
         {

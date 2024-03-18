@@ -5,7 +5,7 @@ using System.IO.Pipes;
 
 namespace primeiraAula
 {
-    class Aula_1
+    class Aula1_Cap1
     {
         static void _1Aula(string[] arg)
         {

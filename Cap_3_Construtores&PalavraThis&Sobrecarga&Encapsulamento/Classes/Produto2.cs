@@ -8,12 +8,9 @@ namespace CursoDeCsharp
         public double Preco;
         public int Quantidade;
 
-        /* Construtor customizado, que permitirá que o objeto seja instanciado com todos seus atributos */
-        public Produto2(string nome, double preco, int quantidade)
+        /* Construtor padrão, ou seja, permitirá que o objeto seja criado sem ter de referênciar seus atributos */
+        public Produto2()
         {
-            Nome = nome;
-            Preco = preco;
-            Quantidade = quantidade;
         }
         
         /* Construtor customizado, que permitirá que o objeto seja instanciado com apenas 2 atributos (nome e preço)  */
@@ -22,12 +19,12 @@ namespace CursoDeCsharp
             Nome = nome;
             Preco = preco;
         }
-        
-        /* Construtor padrão, ou seja, permitirá que o objeto seja criado sem ter de referênciar seus atributos */
-        public Produto2()
+        /* Construtor customizado, que permitirá que o objeto seja instanciado com todos seus atributos */
+        public Produto2(string nome, double preco, int quantidade) : this (nome, preco)
         {
+            Quantidade = quantidade;
         }
-
+        
         public override string ToString()
         {
             return

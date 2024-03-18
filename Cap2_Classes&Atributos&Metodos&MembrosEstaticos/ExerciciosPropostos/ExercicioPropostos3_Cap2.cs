@@ -2,7 +2,7 @@
 
 namespace CursoDeCsharp
 {
-    class ExercicioPropostos3
+    class ExercicioPropostos3_Cap2
     {
         static void Ex_Propostos3(string[] arg)
         {

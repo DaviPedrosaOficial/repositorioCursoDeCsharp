@@ -5,7 +5,7 @@ using System.Globalization;
 
 namespace primeiraAula
 {
-    class ExercicioAula_1
+    class ExercicioAula_1_Cap1
     {
         static void Ex_Aula1(string[] arg)
         {

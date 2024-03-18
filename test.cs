@@ -7,20 +7,41 @@ namespace CursoDeCsharp
         static void Main(string[] arg)
         {
             /* Hub de teste */
-            Animal animal = new Animal("Elefante", 30, "Blue");
+            Console.Write("Insira a seguir, o nome de quem sera o titular da conta: ");
+            string nome = Console.ReadLine();
+            
+            Console.Write("Agora, insira o numero que a sua conta terá: ");
+            int num = int.Parse(Console.ReadLine());
 
-            /* Utilizando o método get, a partir de nossa auto-properties */
-            animal.Especie = "Leao";
-    
-            /* Se tentassemos fazer "animal.Idade = 10;" não seria possível, já que seu método set foi privado em nossa
-             classe */
-            
-            animal.Nome = "Rubros";
-            
-            /* Utilizando os métodos set de nossa classe */
-            Console.WriteLine("ESPECIE: {0}",animal.Especie);
-            Console.WriteLine("IDADE: {0}",animal.Idade);
-            Console.WriteLine("NOME: {0}",animal.Nome);
+            Console.Write("Sua conta tera deposito inicial? (Utilize s/n para a resposta): ");
+            string consulta = Console.ReadLine().ToLower();
+            double depInicial = 0;
+
+            if (consulta == "s" || consulta == "sim")
+            {
+                Console.Write("Então insira a seguir o valor do deposito inicial: ");
+                depInicial = double.Parse(Console.ReadLine());
+            }
+
+            Banco novoCliente = new Banco(nome, num, depInicial);
+
+            Console.WriteLine();
+            Console.WriteLine(novoCliente);
+
+            Console.Write("\r\nAgora insira um valor para depositar em sua conta: ");
+            novoCliente.Deposito(double.Parse(Console.ReadLine()));
+
+            Console.WriteLine();
+            Console.WriteLine("Dados atualizados!");
+            Console.WriteLine(novoCliente);
+
+            Console.WriteLine();
+            Console.Write("E por fim, insira um valor para ser sacado de sua conta: ");
+            novoCliente.Saque(double.Parse(Console.ReadLine()));
+
+            Console.WriteLine();
+            Console.WriteLine("Dados atualizados!");
+            Console.WriteLine(novoCliente);
         }
     }
 }

@@ -4,7 +4,7 @@ using System;
 
 namespace CursoDeCsharp
 {
-    class ExercicioPropostos_4
+    class ExercicioPropostos_4_Cap1
     {
         static void Ex_Propostos4(string[] arg)
         {
