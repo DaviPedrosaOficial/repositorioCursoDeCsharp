@@ -27,7 +27,9 @@ namespace CursoDeCsharp
             o valor de depósito inicial. 
             Em seguida, realizar um depósito e depois um saque, sempre mostrando os dados da conta após cada operação.  */
 
-            Console.Write("Insira a seguir, o nome de quem sera o titular da conta: ");
+            Banco novoCliente;
+            
+            Console.Write("Insira a seguir, o nome do titular da conta: ");
             string nome = Console.ReadLine();
             
             Console.Write("Agora, insira o numero que a sua conta terá: ");
@@ -39,11 +41,15 @@ namespace CursoDeCsharp
 
             if (consulta == "s" || consulta == "sim")
             {
-                Console.Write("Então insira a seguir o valor do deposito inicial: ");
+                Console.Write("Então, insira a seguir o valor do deposito inicial: ");
                 depInicial = double.Parse(Console.ReadLine());
+                novoCliente = new Banco(nome, num, depInicial);
+            }
+            else
+            {
+                novoCliente = new Banco(nome, num);
             }
 
-            Banco novoCliente = new Banco(nome, num, depInicial);
 
             Console.WriteLine();
             Console.WriteLine(novoCliente);
