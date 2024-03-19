@@ -1,5 +1,7 @@
 ﻿/* ------ Tipos referência vs tipos valor ------ */
 
+using primeiraAula.Cap4.Classes;
+
 namespace CursoDeCsharp{
     
     class Aula1_Cap4{
@@ -69,7 +71,43 @@ namespace CursoDeCsharp{
               Além disso, é possível criarmos nossos próprios tipos valor!
              
               Para isso, utilizamos a mesmas norma de criação de classes, mas ao invés de colocarmos o prefixo class, 
-              utilizaremos o struct. (Foi criado o struct Ponto, para demonstrar) */
+             utilizaremos o struct. (Foi criado o struct Ponto, para demonstrar)
+              O mesmo opera da mesma maneira da classe, porém, sem alguns de seus recursos, e com o comportamento de 
+             memória igual ao que foi descrito acima. Além disso, ao inicializarmos um struct em outra classe teremos de 
+             chamá-lo, porém, poderemos ou não instanciá-lo!
+             
+             Veja a seguir sua implementação:                                                                        */
+
+            /* Repare que não foi necessário instanciá-lo para utilizarmos o struct Ponto */
+            Ponto p1;
+
+            p1.X = 10;
+            p1.Y = 20;
+
+            Console.WriteLine("P1");
+            Console.Write(p1);
+            Console.WriteLine();
+
+            /* Mas é possível também, instanciá-lo */
+            Ponto p2 = new Ponto();
+
+            Console.WriteLine("P2");
+            Console.Write(p2);
+            
+            /* ----------- Bônus -----------
+             ------ Valores padrões ------
+             
+              Quando alocamos (new) qualquer tipo estruturado (classe, struct, array), são atribuídos valores padrões
+             aos seus elementos.
+             
+             Exemplo dos valores:
+             - númericos => 0;
+             - bool => False;
+             - char => caractere código 0 (Não significa que sera 0, mas sim o caractere de código 0)
+             - objeto => null;
+             
+              Lembrando: uma variável apenas declarada, mas não instanciada, inicia em estado "não atribuída", onde o 
+             próprio compilador não permitirá que a mesma seja acessada.                                              */
         }
     }
 }

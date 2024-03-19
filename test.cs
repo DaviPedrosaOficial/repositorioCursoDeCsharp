@@ -1,4 +1,5 @@
 ﻿using System;
+using primeiraAula.Cap4.Classes;
 
 namespace CursoDeCsharp
 {
@@ -7,41 +8,20 @@ namespace CursoDeCsharp
         static void Main(string[] arg)
         {
             /* Hub de teste */
-            Console.Write("Insira a seguir, o nome de quem sera o titular da conta: ");
-            string nome = Console.ReadLine();
-            
-            Console.Write("Agora, insira o numero que a sua conta terá: ");
-            int num = int.Parse(Console.ReadLine());
+            Ponto p1;
 
-            Console.Write("Sua conta tera deposito inicial? (Utilize s/n para a resposta): ");
-            string consulta = Console.ReadLine().ToLower();
-            double depInicial = 0;
+            p1.X = 10;
+            p1.Y = 20;
 
-            if (consulta == "s" || consulta == "sim")
-            {
-                Console.Write("Então insira a seguir o valor do deposito inicial: ");
-                depInicial = double.Parse(Console.ReadLine());
-            }
-
-            Banco novoCliente = new Banco(nome, num, depInicial);
-
+            Console.WriteLine("P1");
+            Console.Write(p1);
             Console.WriteLine();
-            Console.WriteLine(novoCliente);
 
-            Console.Write("\r\nAgora insira um valor para depositar em sua conta: ");
-            novoCliente.Deposito(double.Parse(Console.ReadLine()));
+            /* Mas é possível também, instanciá-lo */
+            Ponto p2 = new Ponto();
 
-            Console.WriteLine();
-            Console.WriteLine("Dados atualizados!");
-            Console.WriteLine(novoCliente);
-
-            Console.WriteLine();
-            Console.Write("E por fim, insira um valor para ser sacado de sua conta: ");
-            novoCliente.Saque(double.Parse(Console.ReadLine()));
-
-            Console.WriteLine();
-            Console.WriteLine("Dados atualizados!");
-            Console.WriteLine(novoCliente);
+            Console.WriteLine("P2");
+            Console.Write(p2);
         }
     }
 }
