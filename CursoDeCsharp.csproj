@@ -23,8 +23,4 @@
       <None Remove="CursoDeCsharp2\**" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Cap4\Classes\" />
-    </ItemGroup>
-
 </Project>

@@ -6,7 +6,9 @@ namespace CursoDeCsharp{
 
         static void _Aula1_Cap4(string[] arg)
         {
-            /* Para começarmos essa aula vamos fazer uma declaração, "Classes são tipos referências"!
+            /* ---------- Tipos referência -----------
+             
+              Para começarmos essa aula vamos fazer uma declaração, "Classes são tipos referências"!
              
               Isso ocorre, pois, variáveis do tipo classe não funcionam como "caixa", ou seja, sua função principal não
              é armazenar algo em tal variável, mas sim, armazenar o ponto de referência (o caminho para encontrar) seu 
@@ -24,7 +26,50 @@ namespace CursoDeCsharp{
              nossa memória chamada "Heap", e nossa variável criada antes no stack, terá as coordenadas para que nosso 
              compilador encontre nossos atributos em Heap! Como uma espécie de ponteiro.
              
-               */
+              Isso, reflete também na forma em que o compilador veria a seguinte operação, baseado no exemplo acima:
+             
+              p2 = p1
+             
+              O que ocorre quando fazemos a variável de um objeto receber outra variável objeto, é a copia do ponteiro de
+             referência de p1 para p2, ou seja, nada foi criado ou instanciado, o que esta ocorrendo é que a partir do 
+             comando, a variável p2, copiará e armazenará em sua variável, o ponteiro de referência (coordenadas) do 
+             objeto de p1;
+             
+             E é por isso, que afirmamos que classes são variáveis referência!
+             
+             ------ Valor "null" ------
+             
+              Tipos referência, aceitam o valor null, o que significará para o compilador que aquela variável não esta 
+             apontando para ninguem! Ou seja, não tem coordenada dentro da mesma.
+             
+             
+             ----------- Tipos valor -----------
+             
+              Os "structs" são na prática as "caixas" que imaginamos para armazenamento, sendo assim, considerados os tipos
+             valor. Já que os mesmos armazenam valores dentro de suas variáveis, ao invés de referências.
+             
+              E quem são eles?
+             
+              Structs são os tipos que usamos como prefixos em nosso código para definirmos variáveis, como double, int,
+             string, char ...
+             
+              Então quando criamos variáveis de tipo valor, o que ocorre é uma alocação de um valor dentro de uma "caixa"
+             (espaço de nossa memória) em "Stack" (parte da memória). Sendo assim, veja no exemplo a seguir a diferença 
+             entre os tipos valores quando fazemos uma variável receber o valor de outra:
+             
+             double x , y;
+             
+             x = 20;
+             
+             y = x;
+             
+              Quando fazemos essa operação com tipos valor, o que esta acontecendo de fato é uma cópia do valor alocado na
+             variável x para a variável y, e não uma cópia de uma coordenada que indicará um objeto! 
+               
+              Além disso, é possível criarmos nossos próprios tipos valor!
+             
+              Para isso, utilizamos a mesmas norma de criação de classes, mas ao invés de colocarmos o prefixo class, 
+              utilizaremos o struct. (Foi criado o struct Ponto, para demonstrar) */
         }
     }
 }
