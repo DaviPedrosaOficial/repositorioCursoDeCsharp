@@ -48,7 +48,7 @@ namespace CursoDeCsharp{
              ----------- Tipos valor -----------
              
               Os "structs" são na prática as "caixas" que imaginamos para armazenamento, sendo assim, considerados os tipos
-             valor. Já que os mesmos armazenam valores dentro de suas variáveis, ao invés de referências.
+             valor. Uma vez que, os mesmos armazenam valores dentro de suas variáveis, ao invés de referências.
              
               E quem são eles?
              
@@ -65,14 +65,14 @@ namespace CursoDeCsharp{
              
              y = x;
              
-              Quando fazemos essa operação com tipos valor, o que esta acontecendo de fato é uma cópia do valor alocado na
-             variável x para a variável y, e não uma cópia de uma coordenada que indicará um objeto! 
+              Quando fazemos essa operação com tipos valor, o que esta de fato acontecendo é uma cópia do valor alocado na
+             variável x, sendo repassada para a variável y, e não uma cópia de uma coordenada que apontará para um objeto! 
                
               Além disso, é possível criarmos nossos próprios tipos valor!
              
               Para isso, utilizamos a mesmas norma de criação de classes, mas ao invés de colocarmos o prefixo class, 
              utilizaremos o struct. (Foi criado o struct Ponto, para demonstrar)
-              O mesmo opera da mesma maneira da classe, porém, sem alguns de seus recursos, e com o comportamento de 
+              O struct opera da mesma maneira da classe, porém, sem alguns de seus recursos, e com o comportamento de 
              memória igual ao que foi descrito acima. Além disso, ao inicializarmos um struct em outra classe teremos de 
              chamá-lo, porém, poderemos ou não instanciá-lo!
              
