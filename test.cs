@@ -1,49 +1,33 @@
-﻿namespace CursoDeCsharp
-{
-    public class Quarto
-    {
-        public int Numero { get; set; }
-        public string Nome { get; set; }
-        public string Email { get; set; }
+﻿using System;
+using primeiraAula.Cap4.Classes;
 
-        public Quarto(int numero, string nome, string email)
-        {
-            Numero = numero;
-            Nome = nome;
-            Email = email;
-        }
-    }
-
-    class Test
-    {
-        static void Main(string[] args)
+namespace CursoDeCsharp
+{    class test
+    {        static void Main(string[] arg)
         {
             /* Hub de teste */
 
             Quarto[] pensao = new Quarto[10];
             /* Criando vetor para armazenar os 10 quartos da pensão */
 
-            Console.Write("Insira a seguir a quantidade de quartos que serão alugados: ");
+            Console.Write("Insira a seguir a quantidades de quartos que serao alugados: ");
             int qtdAluguel = int.Parse(Console.ReadLine());
 
-            for (int i = 0; i < qtdAluguel; i++)
-            {
-                Console.Write("Insira a seguir o nome do estudante: ");
+            for (int i = 0; i < qtdAluguel; i ++){
+                Console.Write("Insira a seguir o nome do {0}º estudante: ", i + 1);
                 string nome = Console.ReadLine();
                 Console.Write("Agora, insira o e-mail do estudante: ");
                 string email = Console.ReadLine();
-                Console.Write("E por fim, insira o número do quarto que deseja alugar: ");
+                Console.Write("E por fim, insira o numero do quarto que deseja alugar: ");
                 int numero = int.Parse(Console.ReadLine());
 
-                pensao[numero - 1] = new Quarto(numero, nome, email);
+                pensao[numero - 1] = new Quarto (numero,nome,email);
             }
 
-            Console.WriteLine("\r\n---------- Relatório de aluguéis ----------");
+        Console.WriteLine("\r\n---------- Relatorio de alugueis ----------");
 
-            for (int i = 0; i < 9; i++)
-            {
-                if (pensao[i] != null)
-                {
+            for (int i = 0; i < 9; i++){
+                if(pensao[i] != null){
                     Console.WriteLine();
                     Console.WriteLine("---------------------------------------------------------------------------");
                     Console.WriteLine("QUARTO Nº: {0}", i + 1);
@@ -51,8 +35,7 @@
                     Console.WriteLine("E-MAIL DO ESTUDANTE: {0}", pensao[i].Email);
                     Console.WriteLine("---------------------------------------------------------------------------");
                 }
-                else
-                {
+                else{
                     Console.WriteLine();
                     Console.WriteLine("---------------------------------------------------------------------------");
                     Console.WriteLine("QUARTO Nº: {0}", i + 1);
@@ -63,3 +46,5 @@
         }
     }
 }
+
+
