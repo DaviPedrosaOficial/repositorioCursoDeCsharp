@@ -45,6 +45,7 @@ namespace CursoDeCsharp{
             
             Então para que possamos frizar o que vimos acima, vamos fazer um exercício utilizando os vetores:
             
+            ---- Exercício 1 ----
             Fazer um programa para ler um número inteiro N e a altura de N pessoas.
             Armazene as N alturas em um vetor. Em seguida, mostrar a altura média dessas pessoas.                   */
 
@@ -74,6 +75,48 @@ namespace CursoDeCsharp{
 
             Console.WriteLine();
             Console.WriteLine("MEDIA DE ALTURA: {0:F2}", mediaAlt);
+
+            /* Agora, vamos fazer outro exercício utilizando vetores, mas desta vez, utilizando as classes:
+            
+            ---- Exercício 2 ----
+            Fazer um programa para ler um número inteiro N e os dados (nome e preço) de N Produtos. Armazene os N produtos
+            em um vetor. Em seguida, mostrar o preço médio dos produtos.
+            
+            ------ Manipulação de vetor de elementos tipo classe ------                                                 */
+
+            Produto3 x;
+
+            Console.Write("Insira a seguir a quantidade produtos que voce deseja inserir ao estoque: ");
+            int qtdProdutos = int.Parse(Console.ReadLine());
+            Produto3[] estoque = new Produto3[qtdProdutos];
+            /* Foi criado acima, um vetor de elementos da classe Produto3, porém aqui estamos apenas criando a coordenada que 
+            apontará para nosso vetor que ira conter nosso objetos quando instanciados.
+            
+             Ou seja, ao chamarmos o nosso vetor de classe, foi criado em nossa mémoria heap, um vetor, que nesse caso sera 
+            do tamanho da entrada escolhida pelo usuário (qtdProdutos), onde seus elementos no momento se encontram nulos
+            (null). E somente quando instanciarmos os mesmos, eles serão preenchidos com nossos objetos.                     */
+
+            for (int i = 0; i < qtdProdutos; i++){
+                Console.Write("Insira a seguir o nome do {0}º produto: ", i + 1);
+                string nome = Console.ReadLine();
+                Console.Write("Agora, insira o preco do {0}º produto: ", i + 1);
+                double preco = double.Parse(Console.ReadLine());
+
+                /* Veja abaixo a instanciação de nossos objetos */
+                x = new Produto3 (nome,preco);
+                estoque[i] = x;
+                /* Então, a partir da instanciação acima, nosso vetor em heap deixa de ser nulo, e passa a receber nossos objetos */
+            }
+
+            double totalPreco = 0.0;
+
+            for (int i = 0; i < qtdProdutos; i++){
+                totalPreco += estoque[i].Preco;
+            }
+
+            double calcMedia = totalPreco / qtdProdutos;
+
+            Console.WriteLine("\r\nMEDIA DE PRECO: R${0:F2}",calcMedia);
         }
     }
 }
