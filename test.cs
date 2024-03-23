@@ -1,40 +1,65 @@
-﻿using System;
-using primeiraAula.Cap4.Classes;
-
-namespace CursoDeCsharp
+﻿namespace CursoDeCsharp
 {
-    class test
+    public class Quarto
     {
-        static void Main(string[] arg)
+        public int Numero { get; set; }
+        public string Nome { get; set; }
+        public string Email { get; set; }
+
+        public Quarto(int numero, string nome, string email)
+        {
+            Numero = numero;
+            Nome = nome;
+            Email = email;
+        }
+    }
+
+    class Test
+    {
+        static void Main(string[] args)
         {
             /* Hub de teste */
-              Produto3 x;
 
-            Console.Write("Insira a seguir a quantidade produtos que voce deseja inserir ao estoque: ");
-            int qtdProdutos = int.Parse(Console.ReadLine());
-            Produto3[] estoque = new Produto3[qtdProdutos];
+            Quarto[] pensao = new Quarto[10];
+            /* Criando vetor para armazenar os 10 quartos da pensão */
 
-            for (int i = 0; i < qtdProdutos; i++){
-                Console.Write("Insira a seguir o nome do {0}º produto: ", i + 1);
+            Console.Write("Insira a seguir a quantidade de quartos que serão alugados: ");
+            int qtdAluguel = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < qtdAluguel; i++)
+            {
+                Console.Write("Insira a seguir o nome do estudante: ");
                 string nome = Console.ReadLine();
-                Console.Write("Agora, insira o preco do {0}º produto: ", i + 1);
-                double preco = double.Parse(Console.ReadLine());
+                Console.Write("Agora, insira o e-mail do estudante: ");
+                string email = Console.ReadLine();
+                Console.Write("E por fim, insira o número do quarto que deseja alugar: ");
+                int numero = int.Parse(Console.ReadLine());
 
-                x = new Produto3 (nome,preco);
-                estoque[i] = x;
+                pensao[numero - 1] = new Quarto(numero, nome, email);
             }
 
-            double media = 0.0;
+            Console.WriteLine("\r\n---------- Relatório de aluguéis ----------");
 
-            for (int i = 0; i < qtdProdutos; i++){
-                media += estoque[i].Preco;
+            for (int i = 0; i < 9; i++)
+            {
+                if (pensao[i] != null)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("---------------------------------------------------------------------------");
+                    Console.WriteLine("QUARTO Nº: {0}", i + 1);
+                    Console.WriteLine("NOME DO ESTUDANTE: {0}", pensao[i].Nome);
+                    Console.WriteLine("E-MAIL DO ESTUDANTE: {0}", pensao[i].Email);
+                    Console.WriteLine("---------------------------------------------------------------------------");
+                }
+                else
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("---------------------------------------------------------------------------");
+                    Console.WriteLine("QUARTO Nº: {0}", i + 1);
+                    Console.WriteLine("QUARTO VAGO!");
+                    Console.WriteLine("---------------------------------------------------------------------------");
+                }
             }
-
-            double calcMedia = media / qtdProdutos;
-
-            Console.WriteLine("\r\nMEDIA DE PRECO: R${0:F2}",calcMedia);
         }
     }
 }
-
-

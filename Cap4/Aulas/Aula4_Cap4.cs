@@ -11,8 +11,6 @@ namespace CursoDeCsharp{
             2 - Manipulação de vetor de elementos tipo structs
             3 - Manipulação de vetor de elementos tipo classe
             4 - Acesso aos elementos
-            5 - Propriedade Length
-            
             
             ------ Revisão do conceito de vetores ------
             
@@ -110,8 +108,16 @@ namespace CursoDeCsharp{
 
             double totalPreco = 0.0;
 
+            /* ------ Acesso aos elementos do vetor ------ */
+
             for (int i = 0; i < qtdProdutos; i++){
                 totalPreco += estoque[i].Preco;
+                /* Para acessarmos elementos de nossos vetores utilizamos as posições dos mesmos. No caso acima precisavamos pegar 
+                o preço de todos os nossos objetos, então para isso, utilizamos o loop for, onde a variável "i" a partir de seu 
+                incremento, percorreu todo nosso vetor. E para cada elemento do vetor, a mesma somou sou preço a variável totalPreco.
+                
+                Então para frizar, para que possamos acesar elementos de nossos vetores, utilizamos a seguinte nomenclatura:
+                nomeDoVetor [posiçãoDoElemento]  */
             }
 
             double calcMedia = totalPreco / qtdProdutos;
