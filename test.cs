@@ -7,9 +7,11 @@ namespace CursoDeCsharp
         {
             /* Hub de teste */
 
-            int x = 30;
-            Calculadora2.Triplica(ref x);
-            Console.WriteLine(x);
+            string[] nomeAlunos = new string[] {"João", "Maria", "Pedro"};
+
+            foreach (string nome in nomeAlunos){
+                Console.WriteLine(nome);
+            }
         }
     }
 }
