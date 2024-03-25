@@ -23,8 +23,13 @@ namespace CursoDeCsharp{
         }
 
         /* Demonstrando o modificador de parâmetro ref, aula 6 do Cap. 4 */
-        public static void Triplica(ref int x){
+        public static void TriplicaRef(ref int x){
             x = x * 3;
+        }
+
+        /* Demonstrando o modificador de parâmetro out, aula 6 do Cap. 4 */
+        public static void TriplicaOut(int origem, out int resultado){
+            resultado = origem * 3;
         }
     }
 }
