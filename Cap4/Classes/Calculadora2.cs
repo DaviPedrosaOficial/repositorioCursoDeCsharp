@@ -21,5 +21,10 @@ namespace CursoDeCsharp{
             }
             return soma;
         }
+
+        /* Demonstrando o modificador de parâmetro ref, aula 6 do Cap. 4 */
+        public static void Triplica(ref int x){
+            x = x * 3;
+        }
     }
 }

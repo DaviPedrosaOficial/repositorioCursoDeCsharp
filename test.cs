@@ -7,9 +7,9 @@ namespace CursoDeCsharp
         {
             /* Hub de teste */
 
-             int soma1 = Calculadora2.Soma (new int[] {1, 2, 3});
-            Console.WriteLine(soma1);
-            
+            int x = 30;
+            Calculadora2.Triplica(ref x);
+            Console.WriteLine(x);
         }
     }
 }
