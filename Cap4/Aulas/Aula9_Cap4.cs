@@ -61,6 +61,8 @@ namespace CursoDeCsharp{
             listaDeNomes.Add("Pedro");
             listaDeNomes.Add("Davi");
 
+            Console.WriteLine("------- Lista de nomes utilizando Add ------- ");
+
             foreach (string nome in listaDeNomes){
                 Console.WriteLine(nome);
             }
@@ -68,6 +70,9 @@ namespace CursoDeCsharp{
             /* Utilizando Insert (index , elemento) */
             listaDeNomes.Insert(0,"Paulo");
             listaDeNomes.Insert(2, "Flavia");
+
+            Console.WriteLine();
+            Console.WriteLine("------- Lista de nomes utilizando Insert ------- ");
 
             foreach (string nome in listaDeNomes){
                 Console.WriteLine(nome);
@@ -80,8 +85,63 @@ namespace CursoDeCsharp{
             similar a chamada Length, retornando para nos, o tamanho da mesma
             
             Veja a seguir sua execução:                                                                                  */
+
+            Console.WriteLine();
+            Console.WriteLine("Tamanho da lista (utilizando o .Count): " + listaDeNomes.Count);
+
+            /* ------ Encontrar o primeiro e o ultimo elemento de uma lista que satisfaça um predicado ------
+            Ao utilizarmos a lista, podemos utilizar algumas chamadas para que possamos encontrar elementos que satisfação
+            determinada condição. Essas chamadas são o Find (encontra o primeiro elemento que satisfaz nossa condição) e
+            FindLast (encontra o ultimo elemento que satisfaz nossa condição).
             
-            Console.WriteLine(listaDeNomes.Count);
+            É importante explicarmos o que seria tal predicado, já que esse é necessário executar nossa chamada. A ideia de
+            predicado esta ligada a um conceito que veremos mais a frente no curso, a de conceito de lambda, que se trata de
+            uma função gênerica que podemos criar sem a necessidade de criarmos uma função em nosso código. Porém, como ainda
+            não chegamos a tal parte de nosso curso, vamos entender esse predicado com uma função que tenhamos criado.
+            
+            Sendo assim, conseguimos entender que para que as chamada sejam executadas, precisaremos de uma função que demons-
+            tre ao nosso compilador, qual o primeiro ou o ultimo elemento que desejamos encontrar baseado no parâmetro de nossa
+            função.
+            
+            Veja abaixo a execução (Ps.: Foi criada uma função no final do código para que pudessemos utilizar a chamada):  */
+
+            /* Veja que baseado na função feita no final do programa, conseguimos utilizar o mesmo como parâmetro para nossas
+            chamadas Find & FindLast */
+
+            Console.WriteLine();
+            Console.WriteLine("------- Utilizando o Find & FindLast -------");
+            Console.WriteLine();
+
+            string primeiroNomeComP = listaDeNomes.Find(comecaEmP);
+            Console.WriteLine("Primeiro nome que começa com 'P': " + primeiroNomeComP);
+
+            string ultimoNomeComP = listaDeNomes.FindLast(comecaEmP);
+            Console.WriteLine("Ultimo nome que começa com 'P': " + ultimoNomeComP);
+
+            /* Além disso, podemos notar também a nomenclatura utilizada para a chamada:
+
+            nomeDoConjunto.Find(parâmetro)
+            nomeDoConjunto.FindLast(parâmetro)
+            
+            Porém, existe outra maneira de executarmos a mesma chamada sem termos de desenvolver uma função. Para isso, utiliza-
+            mos funções lambdas, veja a seguir a implementação da mesma:                                                      */
+
+            string nomeComD = listaDeNomes.Find(x => x[0] == 'D');
+
+            /* Agora, vamos explicar o que significa tal nomenclatura de nossa lambda.
+            
+            Quando colocamos x como primeiro parâmetro, demos um mero apelido para referênciarmos os elementos de nossa lista e
+            criamos nossa condicional.
+            Além disso, por nossa lista se tratar de strings, o nosso compilador já considerou que x será uma string também, já
+            que iremos utilizar a lista como o conjunto no qual faremos a busca.
+            Agora, quando colocamos '=>' a nomenclatura significa 'tal que', ou seja, para 'x' (apelido) tal que x[0](primeira
+            letra de x) seja igual a 'D'.
+            
+            Passando para o portunhol: listaDeNomes.Encontre(x tal que x[0] é igual a 'D') */
+
+        }
+        public static bool comecaEmP (string nome){
+            return nome[0] == 'P';
         }
     }
 }
