@@ -27,7 +27,7 @@ namespace CursoDeCsharp{
                 Console.Write("Insira o numero correspondente a operacao que voce deseja efetuar: ");
                 int controlador = int.Parse(Console.ReadLine());
 
-                if (controlador < 1 && controlador > 4){
+                if (controlador < 1 || controlador > 4){
                     Console.WriteLine();
                     Console.WriteLine("Valor inserido invalido, tente novamente");
                 }
@@ -49,35 +49,34 @@ namespace CursoDeCsharp{
 
                     for (int i = 0; i < qtdFunc; i++){
                         while(true){
+                            Console.WriteLine();
                             Console.Write("Insira a seguir o id {0}º do funcionario: ", i + 1);
                             int idSolicitado = int.Parse(Console.ReadLine());
-                            
-                            int varTest = 0;
-                            foreach(Funcionario3 funcionario in bancoDeFuncionarios){
-                                if(funcionario.Id == idSolicitado){
-                                    varTest += 1;
-                                }
-                            }
 
-                            if (varTest > 0){
-                                Console.WriteLine("O Id escolhido ja existe, tente novamente");
+                            Funcionario3 encFunc = bancoDeFuncionarios.Find(x => x.Id == idSolicitado);
+
+                            if (encFunc != null){
+                                Console.WriteLine();
+                                Console.WriteLine("O Id solicitado para o funcionario ja existe, tente novamente com outro Id!");
                             }
                             else {
                                 Console.Write("Insira a seguir o nome do {0}º funcionario: ", i + 1);
                                 string nome = Console.ReadLine();
-                                
+
                                 while(true){
                                     Console.Write("Insira o salario do {0}º funcionario: ", i + 1);
                                     double salarioProposto = double.Parse(Console.ReadLine());
 
                                     if(salarioProposto < 1){
                                         Console.WriteLine("Valor inserido invalido, tente novamente");
+                                        Console.WriteLine();
                                     }
                                     else{
                                         bancoDeFuncionarios.Add(new Funcionario3(idSolicitado,nome,salarioProposto));
                                         break;
                                     }
                                 }
+
                                 break;
                             }
                         }
@@ -85,29 +84,57 @@ namespace CursoDeCsharp{
                 }
                 else if (controlador == 2){
                     while(true){
+                        Console.WriteLine();
                         Console.Write("Insira o numero de Id do funcionario no qual voce deseja aumentar o salario: ");
                         int idAumento = int.Parse(Console.ReadLine());
+ 
+                        Funcionario3 encontrandoFuncionario = bancoDeFuncionarios.Find(x => x.Id == idAumento);
 
-                        foreach(Funcionario3 funcionario in bancoDeFuncionarios){
-                            if (funcionario.Id == idAumento){
-                                Console.WriteLine("{0} encontrado!", funcionario.Nome);
-                                
-                                while(true){
-                                    Console.Write("Insira a porcentagem do salario de {0} que voce deseja aumentar (ex: 0,10 para 10%): ", funcionario.Nome);
-                                    double porc = double.Parse(Console.ReadLine());
-                                    
-                                    if (porc > 1 || porc < 0.01){
-                                        Console.WriteLine("Valor inserido invalido, tente novamente");
-                                    }
-                                    else{
-                                        funcionario.AumentaSalario(porc);
-                                        Console.WriteLine("Salario atualizado!");
+                        if(encontrandoFuncionario != null){
+ 
+                            foreach(Funcionario3 funcionario in bancoDeFuncionarios){
+                                if (funcionario.Id == idAumento){
+                                    Console.WriteLine();
+                                    Console.WriteLine("{0} encontrado!", funcionario.Nome);
+ 
+                                    while(true){
+                                        Console.WriteLine();
+                                        Console.Write("Insira a porcentagem do salario de {0} que voce deseja aumentar (ex: 0,10 para 10%): ", funcionario.Nome);
+                                        double porc = double.Parse(Console.ReadLine());
+ 
+                                        if (porc > 1 || porc < 0.01){
+                                            Console.WriteLine();
+                                            Console.WriteLine("Valor inserido invalido, tente novamente");
+                                        }
+                                        else{
+                                            funcionario.AumentaSalario(porc);
+                                            Console.WriteLine();
+                                            Console.WriteLine("Salario atualizado!\r\nDADOS ATUALIZADOS\r\n{0}", funcionario);
+                                            break;
+                                        }
                                     }
                                 }
                             }
-
+ 
+                            break;
+                        }
+                        else{
+                            Console.WriteLine();
+                            Console.WriteLine("Funcionario não encontrado, tente novamente");
                         }
                     }
+                }
+                else if (controlador == 3){
+                    Console.WriteLine();
+                    Console.WriteLine(" ------------ Lista de Funcionarios cadastrados no banco de dados ------------");
+                    foreach(Funcionario3 funcionario in bancoDeFuncionarios){
+                        Console.WriteLine(funcionario);
+                    }
+                }
+                else{
+                    Console.WriteLine();
+                    Console.WriteLine("Programa encerrado, ate a proxima!");
+                    break;
                 }
             }
         }

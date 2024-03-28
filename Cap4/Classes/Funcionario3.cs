@@ -42,7 +42,7 @@ namespace CursoDeCsharp{
         }
         public override string ToString()
         {
-            return $"-------------------------\r\nID: {Id} \r\nNOME: {Nome} \r\nSALARIO: {Salario}\r\n-------------------------";
+            return $"-------------------------\r\nID: {Id} \r\nNOME: {Nome} \r\nSALARIO: {Salario:F2}\r\n-------------------------";
         }
     }
 }
