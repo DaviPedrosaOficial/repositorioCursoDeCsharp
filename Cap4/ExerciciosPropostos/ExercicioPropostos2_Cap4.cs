@@ -14,7 +14,7 @@ namespace CursoDeCsharp{
             Lembre-se de aplicar a técnica de encapsulamento para não permitir que o salário possa ser mudado livremente.
             Um salário só pode ser aumentado com base em uma operação de aumento por porcentagem dada.                 */
 
-            List<Funcionario3> BancoDeFuncionarios = new List<Funcionario3>();
+            List<Funcionario3> bancoDeFuncionarios = new List<Funcionario3>();
 
             Console.WriteLine("Bem vindo ao controle de funcionarios da empresa Birulinha!");
 
@@ -50,15 +50,65 @@ namespace CursoDeCsharp{
                     for (int i = 0; i < qtdFunc; i++){
                         while(true){
                             Console.Write("Insira a seguir o id {0}º do funcionario: ", i + 1);
-                            int testaId = int.Parse(Console.ReadLine());
+                            int idSolicitado = int.Parse(Console.ReadLine());
                             
-                            if (BancoDeFuncionarios.Find(x => x.Id == testaId)){
+                            int varTest = 0;
+                            foreach(Funcionario3 funcionario in bancoDeFuncionarios){
+                                if(funcionario.Id == idSolicitado){
+                                    varTest += 1;
+                                }
+                            }
+
+                            if (varTest > 0){
                                 Console.WriteLine("O Id escolhido ja existe, tente novamente");
+                            }
+                            else {
+                                Console.Write("Insira a seguir o nome do {0}º funcionario: ", i + 1);
+                                string nome = Console.ReadLine();
+                                
+                                while(true){
+                                    Console.Write("Insira o salario do {0}º funcionario: ", i + 1);
+                                    double salarioProposto = double.Parse(Console.ReadLine());
+
+                                    if(salarioProposto < 1){
+                                        Console.WriteLine("Valor inserido invalido, tente novamente");
+                                    }
+                                    else{
+                                        bancoDeFuncionarios.Add(new Funcionario3(idSolicitado,nome,salarioProposto));
+                                        break;
+                                    }
+                                }
+                                break;
                             }
                         }
                     }
                 }
+                else if (controlador == 2){
+                    while(true){
+                        Console.Write("Insira o numero de Id do funcionario no qual voce deseja aumentar o salario: ");
+                        int idAumento = int.Parse(Console.ReadLine());
 
+                        foreach(Funcionario3 funcionario in bancoDeFuncionarios){
+                            if (funcionario.Id == idAumento){
+                                Console.WriteLine("{0} encontrado!", funcionario.Nome);
+                                
+                                while(true){
+                                    Console.Write("Insira a porcentagem do salario de {0} que voce deseja aumentar (ex: 0,10 para 10%): ", funcionario.Nome);
+                                    double porc = double.Parse(Console.ReadLine());
+                                    
+                                    if (porc > 1 || porc < 0.01){
+                                        Console.WriteLine("Valor inserido invalido, tente novamente");
+                                    }
+                                    else{
+                                        funcionario.AumentaSalario(porc);
+                                        Console.WriteLine("Salario atualizado!");
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
             }
         }
     }

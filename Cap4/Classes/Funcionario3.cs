@@ -40,5 +40,9 @@ namespace CursoDeCsharp{
         public void AumentaSalario(double porcentagem){
             _salario += _salario * porcentagem;
         }
+        public override string ToString()
+        {
+            return $"-------------------------\r\nID: {Id} \r\nNOME: {Nome} \r\nSALARIO: {Salario}\r\n-------------------------";
+        }
     }
 }
