@@ -1,13 +1,15 @@
-﻿using System;
-using primeiraAula.Cap4.Classes;
+/* ------ Praticando a utilização de matrizes ------ */
 
-namespace CursoDeCsharp
-{    class test
-    {        static void Main(string[] arg)
-        {
-            /* Hub de teste */
+namespace CursoDeCsharp{
 
-           Console.Write("Insira a seguir a tamanho de sua matriz quadrada: ");
+    class Aula11_Cap4{
+
+        static void _Aula11_Cap4(string [] arg){
+
+            /* Fazer um programa para ler um número inteiro N e uma matriz de ordem N (quadrada) contendo números inteiros.
+             Em seguida, mostrar a diagonal principal e a quantidade de valores negativos da matriz */
+
+            Console.Write("Insira a seguir a tamanho de sua matriz quadrada: ");
             int tam = int.Parse(Console.ReadLine());
 
             int [,] matriz = new int[tam,tam];
@@ -64,5 +66,3 @@ namespace CursoDeCsharp
         }
     }
 }
-
-
