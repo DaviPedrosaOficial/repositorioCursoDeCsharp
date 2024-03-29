@@ -1,13 +1,17 @@
-﻿using System;
-using primeiraAula.Cap4.Classes;
+/* ------ Exercício proposto 3 do Cap 4 ------ */
 
-namespace CursoDeCsharp
-{    class test
-    {        static void Main(string[] arg)
-        {
-            /* Hub de teste */
+namespace CursoDeCsharp{
 
-           Console.Write("Insira a seguir o tamanho de sua matriz (linhas e colunas separados por espaco): ");
+    class ExercicioPropostos3_Cap4{
+
+        static void Ex_Propostos3_Cap4(string [] arg){
+
+            /* Fazer um programa para ler dois números inteiros M e N, e depois ler uma matriz de M linhas por
+            N colunas contendo números inteiros, podendo haver repetições.
+            Em seguida, ler um número inteiro X que pertence à matriz.
+            Para cada ocorrência de X, mostrar os valores à esquerda, acima, à direita e abaixo de X, quando houver. */
+
+            Console.Write("Insira a seguir o tamanho de sua matriz (linhas e colunas separados por espaco): ");
             string[] recebeTam = Console.ReadLine().Split(' ');
 
             int linha = int.Parse(recebeTam[0]);
@@ -74,5 +78,3 @@ namespace CursoDeCsharp
         }
     }
 }
-
-
