@@ -1,11 +1,10 @@
-﻿using System;
-using primeiraAula.Cap4.Classes;
+/* ------ Funções interessantes para string ------ */
 
-namespace CursoDeCsharp
-{    class test
-    {        static void Main(string[] arg)
-        {
-            /* Hub de teste */
+namespace CursoDeCsharp{
+
+    class Aula4_Cap5{
+
+        static void _Aula4_Cap5(string [] arg){
 
             /* Nessa aula demonstraremos funções que podem ser utilizada por strings.
             Veja abaixo a explicação e execução de cada uma delas:                                               */
@@ -97,5 +96,3 @@ namespace CursoDeCsharp
         }
     }
 }
-
-
