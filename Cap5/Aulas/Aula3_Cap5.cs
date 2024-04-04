@@ -1,11 +1,22 @@
-﻿using System;
-using primeiraAula.Cap4.Classes;
+/* ------ Sintaxe alternativa (expressão condicional ternária) ------ */
 
-namespace CursoDeCsharp
-{    class test
-    {        static void Main(string[] arg)
-        {
-            /* Hub de teste */
+namespace CursoDeCsharp{
+
+    class Aula3_Cap5{
+
+        static void _Aula3_Cap5(string [] arg){
+
+            /*----- O que são expressões condicionais ternárias? ------
+            
+            As expressões condicionais ternárias são outra maneira que temos de desenvolver uma estrutura condicional
+            do tipo if & else, de maneira mais simples e resumida. Onde para que possamos executá-las é necessário um
+            VALOR base para uma condicional.
+            
+            Sintaxe:  (condição) ? valor_se_verdadeiro : valor_se_falso;
+            
+            Para que possamos entender melhor o conceito, vamos desenvolver uma estrutura comum utilizando o if & else,
+            para que depois, possamos demonstrar como a mesma ficaria ao utilizarmos as condicionais ternárias.
+            Veja a seguir:                                                                                           */
 
             Console.Write("Insira a seguir o valor total da compra: ");
             double val = double.Parse(Console.ReadLine());
@@ -37,5 +48,3 @@ namespace CursoDeCsharp
         }
     }
 }
-
-
