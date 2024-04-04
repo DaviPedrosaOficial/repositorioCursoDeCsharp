@@ -7,11 +7,11 @@ namespace CursoDeCsharp{
         static void _Aula2_Cap5(string [] arg){
 
             /* ------ O que é a sintaxe alternativa (switch case) ------
-            
+
             O switch case é uma estrutura opcional a vários if-else encadeados, quando a condição para determiná-los
             envolve o teste de valor de uma variável. Ou seja, a depender do valor da mesma, teremos diferentes opções
             para o prosseguimento de nosso código.
-            
+
             Para ficar mais didático, vamos mostrar como o mesmo funciona na prática, mas para isso vamos demonstrar
             primeiro como seria um código sem a utilização do mesmo, para que depois possamos implementá-lo:      */
 
@@ -57,7 +57,33 @@ namespace CursoDeCsharp{
                 case 1 :
                     Console.WriteLine("\r\nHoje é segunda!");
                     break;
+                case 2 :
+                    Console.WriteLine("\r\nHoje é terca!");
+                    break;
+                case 3 :
+                    Console.WriteLine("\r\nHoje é quarta!");
+                    break;
+                case 4 :
+                    Console.WriteLine("\r\nHoje é quinta!");
+                    break;
+                case 5 :
+                    Console.WriteLine("\r\nHoje é sexta!");
+                    break;
+                case 6 :
+                    Console.WriteLine("\r\nHoje é sabado!");
+                    break;
+                case 7 :
+                    Console.WriteLine("\r\nHoje é domingo!");
+                    break;
+                /* Note que não foi necessário escrever o if & else para cada uma das condicionais, sendo assim mais simples de
+                desenvolver as mesmas. Porém, temos de lembrar que sempre ao final da case, devemos colocar o "break;", assim
+                como em loops while, para que não haja erro em nosso código.
 
+                Além disso, para o else em expecífico, utilizamos o caso "default", para que o compilador entenda como else!
+                Veja a seguir:                                                                                               */
+                default:
+                    Console.WriteLine("\r\nDia inválido!");
+                    break;
             }
         }
     }

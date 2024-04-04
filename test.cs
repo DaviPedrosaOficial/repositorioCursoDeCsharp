@@ -7,69 +7,43 @@ namespace CursoDeCsharp
         {
             /* Hub de teste */
 
-           Console.Write("Insira a seguir o tamanho de sua matriz (linhas e colunas separados por espaco): ");
-            string[] recebeTam = Console.ReadLine().Split(' ');
+            Console.Write("Insira a seguir, qual dia estamos na semana, utilizando 1 para segunda, 2 para terça, ...\r\nInsira o número correspondente:");
+            int switchDiaDaSemana = int.Parse(Console.ReadLine());
 
-            int linha = int.Parse(recebeTam[0]);
-            int coluna = int.Parse(recebeTam[1]);
-
-            int[,] matriz = new int[linha,coluna];
-
-            for(int i = 0; i < linha; i++){
-                Console.WriteLine();
-                Console.WriteLine("Insira os elementos da {0}ª linha de sua matriz (separando os elementos por espaco):", i + 1);
-
-                string[] valores = Console.ReadLine().Split(' ');
-
-                for (int j = 0; j < coluna; j++){
-                    matriz[i,j] = int.Parse(valores[j]);
-                }
-            }
-
-            Console.WriteLine();
-            Console.Write("Agora, insira um numero presente em sua matriz para que possamos demonstrar os elementos que estao\r\nacima, a esquerda e a direita do mesmo: ");
-            int elementoEscolhido = int.Parse(Console.ReadLine());
-
-            for (int i = 0; i < linha; i++){
-
-                for (int j = 0; j < coluna; j++){
-
-                    if(matriz[i,j] == elementoEscolhido){
-
-                        Console.WriteLine("Elemento {0} encontrado na posicao [{1},{2}]", elementoEscolhido, i, j);
-
-                        if(matriz.GetLength(0) == 1 && matriz.GetLength(1) == 1){
-                            Console.WriteLine("A matriz possue apenas 1 elmento, portanto nao tera numeros em outras posicoes!");
-                        }
-                        else if (i == 0){
-                            if(j == 0){
-                                Console.WriteLine("Elemento a direita: {0}", matriz[i , j + 1]);
-                            }
-                            else if (j == matriz.GetLength(1) - 1){
-                                Console.WriteLine("Elemento a sua esquerda: {0}", matriz[i , j - 1]);
-                            }
-                            else{
-                                Console.WriteLine("Elemento a sua esquerda: {0}", matriz[i , j - 1]);
-                                Console.WriteLine("Elemento a sua direita: {0}", matriz[i , j + 1]);
-                            }
-                        }
-                        else {
-                            if (j == 0){
-                                Console.WriteLine("Elemento acima: {0}", matriz[i - 1, j]);
-                                Console.WriteLine("Elemento a sua direita: {0}", matriz[i , j + 1]);
-                            }
-                            else if (j == matriz.GetLength(1) - 1){
-                                Console.WriteLine("Elemento acima: {0}", matriz[i - 1, j]);
-                                Console.WriteLine("Elemento a sua esquerda: {0}", matriz[i , j - 1]);
-                            }
-                            else{
-                                Console.WriteLine("Elemento acima: {0}", matriz[i - 1, j]);
-                                Console.WriteLine("Elemento a sua esquerda: {0}", matriz[i , j - 1]);
-                                Console.WriteLine("Elemento a sua direita: {0}", matriz[i , j + 1]);
-                            }
-                        }
-                    }
-                }
+            switch (switchDiaDaSemana) {
+                /* No switch case, utilizamos as condições a frente do prefixo case, correspondendo ao parâmetro que dese-
+                jamos para aquela condição, ou seja, de acordo com aquele caso (case), teremos a seguinte procedência.
+                Veja como fica abaixo:                                                                                  */
+                case 1 :
+                    Console.WriteLine("\r\nHoje é segunda!");
+                    break;
+                case 2 :
+                    Console.WriteLine("\r\nHoje é terca!");
+                    break;
+                case 3 :
+                    Console.WriteLine("\r\nHoje é quarta!");
+                    break;
+                case 4 :
+                    Console.WriteLine("\r\nHoje é quinta!");
+                    break;
+                case 5 :
+                    Console.WriteLine("\r\nHoje é sexta!");
+                    break;
+                case 6 :
+                    Console.WriteLine("\r\nHoje é sabado!");
+                    break;
+                case 7 :
+                    Console.WriteLine("\r\nHoje é domingo!");
+                    break;
+                /* Note que não foi necessário escrever o if & else para cada uma das condicionais, sendo assim mais simples de
+                desenvolver as mesmas. Porém, temos de lembrar que sempre ao final da case, devemos colocar o "break;", assim
+                como em loops while, para que não haja erro em nosso código.
+                
+                Além disso, para o else em expecífico, utilizamos o caso "default", para que o compilador entenda como else!
+                Veja a seguir:                                                                                               */
+                default:
+                    Console.WriteLine("\r\nDia inválido!");
+                    break;
             }
         }
     }
