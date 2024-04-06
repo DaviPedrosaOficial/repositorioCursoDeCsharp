@@ -27,9 +27,14 @@ namespace CursoDeCsharp{
             Vamos vé-lo a seguir:                                                                                               */
 
             /* Lembre-se, para utilizarmos o DateTime é necessário chamarmos no ínicio de nosso código a biblioteca System. */
+            Console.WriteLine("------ Instanciação e ticks ------");
             DateTime d1 = DateTime.Now;
+
+            Console.Write("DateTime.Now: ");
             Console.WriteLine(d1);
+
             /* Comando para que possamos ver os ticks daquela data, demonstrado abaixo: */
+            Console.Write("DateTime.Ticks: ");
             Console.WriteLine(d1.Ticks);
 
 
@@ -45,12 +50,19 @@ namespace CursoDeCsharp{
 
             Veja a baixo a instanciação das mesmas:                                                                             */
 
+            Console.WriteLine("\r\n------ Construtores do DateTime ------");
+            
             DateTime d2 = new DateTime(1999,10,26);
             DateTime d3 = new DateTime(2024,04,06,12,29,05);
             DateTime d4 = new DateTime(2024,02,10,10,20,59,02);
-
+            
+            Console.Write("DateTime(ano,mes,dia): ");
             Console.WriteLine(d2);
+
+            Console.Write("DateTime(ano,mes,dia,hora,minuto,segundo): ");
             Console.WriteLine(d3);
+
+            Console.Write("DateTime(ano,mes,dia,hora,minuto,segundo,milissegundo): ");
             Console.WriteLine(d4);
             /* Note que no d4, não será demonstrado os milissegundos, pois, para isso será necessário uma formatação especial, que
             veremos mais a frente em nosso curso!
@@ -67,6 +79,7 @@ namespace CursoDeCsharp{
             
             Vamos vê-los a seguir na prática:                                                                                       */
 
+            Console.WriteLine("\r\n------ Builders do DateTime ------");
             DateTime d5 = DateTime.Now;
             DateTime d6 = DateTime.UtcNow;
             DateTime d7 = DateTime.Today;
@@ -90,12 +103,25 @@ namespace CursoDeCsharp{
 
             /* Agora vamos ver a execução dos mesmos:                                                                             */
 
+            Console.Write("DateTime.Now: ");
             Console.WriteLine(d5);
+
+            Console.Write("DateTime.UtcNow: ");
             Console.WriteLine(d6);
+
+            Console.Write("DateTime.Today: ");
             Console.WriteLine(d7);
+
+            Console.Write("DateTime.Parse('2024-04-06'): ");
             Console.WriteLine(d8);
+
+            Console.Write("DateTime.Parse('26/10/1999 09:45:54'): ");
             Console.WriteLine(d9);
+
+            Console.Write("DateTime.ParseExact('1999-10-26' , 'yyyy-MM-dd', CultureInfo.InvariantCulture): ");
             Console.WriteLine(d10);
+
+            Console.Write("DateTime.ParseExact('11/12/2012 09:59:02' , 'dd/MM/yyyy HH:mm:ss', CultureInfo.InvariantCulture): ");
             Console.WriteLine(d11);
         }
     }

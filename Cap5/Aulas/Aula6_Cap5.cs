@@ -1,12 +1,26 @@
-﻿using System;
-using primeiraAula.Cap4.Classes;
-using System.Globalization;
+/* ------ TimeSpan ------ */
 
-namespace CursoDeCsharp
-{    class test
-    {        static void Main(string[] arg)
-        {
-            /* Hub de teste */
+using System;
+
+namespace CursoDeCsharp{
+
+    class Aula6_Cap5{
+
+        static void _Aula6_Cap5(string [] arg){
+
+            /* ------ O que é o TimeSpan ------
+            
+            Assim como o TimeDate, o TimeSpan é um objeto do tipo struct, onde esse diferente do TimeDate, representa a DURAÇÂO de
+            algo.
+            
+            Internamente, o TimeSpan funciona da mesma maneira que o TimeDate, armazenando a duração na forma de "ticks". Ou seja,
+            o nosso compilador ira guardar um numero inteiro daquela duração e quando solicitado será feito a sua conversão para um
+            tempo real da maneira que conhecemos.
+
+            Além disso, temos de lembrar que como ambos são structs padrões da linguagem C#, para que possamos utilizá-los é necessá-
+            rio chamar a biblioteca System no ínicio de nosso código.
+            
+            Vamos ver sua instanciação a seguir:                                                                                 */
 
             Console.WriteLine("------ Instanciando e ticks ------");
             TimeSpan t1 = new TimeSpan(00, 01, 30);
@@ -52,25 +66,6 @@ namespace CursoDeCsharp
 
             Console.Write("TimeSpan(10,2,30,59,500) [dia,hora,minuto,segundo,milissegundo]: ");
             Console.WriteLine(t6);
-
-            /* --- Construtor + From ---
-            
-            O método From, nos permite instanciarmos durações equivalentes aos parâmetros apresentados, ou seja, imagine que é
-            de nosso desejo criar uma duração de 1 dia e 1/2, para isso utilizaremos a instanciação TimeSpan.FromDays(1.5).
-            
-            Veja a seguir todas as suas possibilidades:
-            
-            - TimeSpan.FromDays() [Equivalente a tantos dias]
-            - TimeSpan.FromHours() [Equivalente a tantas horas]
-            - TimeSpan.FromMinutes() [Equivalente a tantos minutos]
-            - TimeSpan.FromSeconds() [Equivalente a tantos segundos]
-            - TimeSpan.FromMilliseconds() [Equivalente a tantos milissegundos]
-            - TimeSpan.FromTicks() [Equivalente a tantos ticks]
-            
-            Veja excecução dos mesmos a seguir para tornar mais didática a compreensão:                                       */
-
         }
     }
 }
-
-
