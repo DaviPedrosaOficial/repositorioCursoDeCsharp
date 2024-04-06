@@ -8,66 +8,38 @@ namespace CursoDeCsharp
         {
             /* Hub de teste */
 
-            Console.WriteLine("------ Instanciando e ticks ------");
-            TimeSpan t1 = new TimeSpan(00, 01, 30);
-            /* Representação de seus parâmetros: (hora, minutos, segundos) */
+            DateTime d = new DateTime(2024,04,06,10,30,40,250);
 
-            Console.Write("TimeSpan: ");
-            Console.WriteLine(t1);
+            Console.WriteLine("------ Propriedades do DateTime ------");
 
-            Console.Write("TimeSpan.Ticks: ");
-            Console.WriteLine(t1.Ticks);
+            Console.Write("DateTime escolhido: ");
+            Console.WriteLine(d + "\r\n");
 
+            Console.WriteLine("1) Date: " + d.Date);
 
-            /* ------ Maneiras de instanciarmos nosso TimeSpan ------
-            
-            --- Construtores ---
-            - TimeSpan() [Cria um TimeSpan 00:00:00]
-            - TimeSpan(12300L) [Cria o TimeSpan baseado nos ticks informados{Deve ser colocado o L no final para demonstrar que é
-            um Long}]
-            - TimeSpan(00,01,30)
-            
-            Vamos vê-los na prática:                                                                                              */
+            Console.WriteLine("2) Day: " + d.Day);
 
-            Console.WriteLine("\r\n------ Construtores ------");
+            Console.WriteLine("3) DayOfWeek: " + d.DayOfWeek);
 
-            TimeSpan t2 = new TimeSpan();
-            TimeSpan t3 = new TimeSpan(900000000L);
-            TimeSpan t4 = new TimeSpan(00,02,30);
-            TimeSpan t5 = new TimeSpan(1,10,25,30);
-            TimeSpan t6 = new TimeSpan(10,2,30,59,500);
+            Console.WriteLine("4) DayOfYear: " + d.DayOfYear);
 
-            Console.Write("TimeSpan(): ");
-            Console.WriteLine(t2);
+            Console.WriteLine("5) Hour: " + d.Hour);
 
-            Console.Write("TimeSpan(900000000L) [Ticks]: ");
-            Console.WriteLine(t3);
+            Console.WriteLine("6) Kind: " + d.Kind);
 
-            Console.Write("TimeSpan(00,02,30) [hora,minuto,segundo]: ");
-            Console.WriteLine(t4);
+            Console.WriteLine("7) Millisecond: " + d.Millisecond);
 
-            Console.Write("TimeSpan(1,10,25,30) [dia,hora,minuto,segundo]: ");
-            Console.WriteLine(t5);
-            /* Note que no terminal a nomenclatura para representar os dias é diferente do que as horas, minutos e segundos. */
+            Console.WriteLine("8) Minute: " + d.Minute);
 
-            Console.Write("TimeSpan(10,2,30,59,500) [dia,hora,minuto,segundo,milissegundo]: ");
-            Console.WriteLine(t6);
+            Console.WriteLine("9) Month: " + d.Month);
 
-            /* --- Construtor + From ---
-            
-            O método From, nos permite instanciarmos durações equivalentes aos parâmetros apresentados, ou seja, imagine que é
-            de nosso desejo criar uma duração de 1 dia e 1/2, para isso utilizaremos a instanciação TimeSpan.FromDays(1.5).
-            
-            Veja a seguir todas as suas possibilidades:
-            
-            - TimeSpan.FromDays() [Equivalente a tantos dias]
-            - TimeSpan.FromHours() [Equivalente a tantas horas]
-            - TimeSpan.FromMinutes() [Equivalente a tantos minutos]
-            - TimeSpan.FromSeconds() [Equivalente a tantos segundos]
-            - TimeSpan.FromMilliseconds() [Equivalente a tantos milissegundos]
-            - TimeSpan.FromTicks() [Equivalente a tantos ticks]
-            
-            Veja excecução dos mesmos a seguir para tornar mais didática a compreensão:                                       */
+            Console.WriteLine("10) Second: " + d.Second);
+
+            Console.WriteLine("11) Ticks: " + d.Ticks);
+
+            Console.WriteLine("12) TimeOfDay: " + d.TimeOfDay);
+
+            Console.WriteLine("13) Year: " + d.Year);
 
         }
     }
