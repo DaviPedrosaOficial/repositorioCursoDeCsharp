@@ -66,6 +66,52 @@ namespace CursoDeCsharp{
 
             Console.Write("TimeSpan(10,2,30,59,500) [dia,hora,minuto,segundo,milissegundo]: ");
             Console.WriteLine(t6);
+
+            /* --- Construtor + From ---
+            
+            O método From, nos permite instanciarmos durações equivalentes aos parâmetros apresentados, ou seja, imagine que é
+            de nosso desejo criar uma duração de 1 dia e 1/2, para isso utilizaremos a instanciação TimeSpan.FromDays(1.5).
+            
+            Veja a seguir todas as suas possibilidades:
+            
+            - TimeSpan.FromDays() [Equivalente a tantos dias]
+            - TimeSpan.FromHours() [Equivalente a tantas horas]
+            - TimeSpan.FromMinutes() [Equivalente a tantos minutos]
+            - TimeSpan.FromSeconds() [Equivalente a tantos segundos]
+            - TimeSpan.FromMilliseconds() [Equivalente a tantos milissegundos]
+            - TimeSpan.FromTicks() [Equivalente a tantos ticks]
+            
+            Veja excecução dos mesmos a seguir para tornar mais didática a compreensão:                                       */
+
+            /*
+            TimeSpan t7 = new TimeSpan.FromDays(1.5);
+            TimeSpan t8 = new TimeSpan.FromHours(2.3);
+            TimeSpan t9 = new TimeSpan.FromMinutes(3.5);
+            TimeSpan t10 = new TimeSpan.FromSeconds(55.2);
+            TimeSpan t11 = new TimeSpan.FromMilliseconds(1000.2);
+            TimeSpan t12 = new TimeSpan.FromTicks(8000000000L);
+
+            Console.WriteLine("\r\n------ Contrutor + From ------");
+
+            Console.Write("TimeSpan.FromDays(1.5): ");
+            Console.WriteLine(t7);
+
+            Console.Write("TimeSpan.FromHours(2.3): ");
+            Console.WriteLine(t8);
+
+            Console.Write("TimeSpan.FromMinutes(3.5): ");
+            Console.WriteLine(t9);
+
+            Console.Write("TimeSpan.FromSeconds(55.2): ");
+            Console.WriteLine(t10);
+
+            Console.Write("TimeSpan.FromMilliseconds(1000.2): ");
+            Console.WriteLine(t11);
+
+            Console.Write("TimeSpan.FromTicks(8000000000L): ");
+            Console.WriteLine(t12);
+
+            O meu visual studio não esta reconhecendo os métodos From, então foi necessário transformá-los em comentarios.      */
         }
     }
 }
