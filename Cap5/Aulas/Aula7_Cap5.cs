@@ -47,8 +47,8 @@ namespace CursoDeCsharp{
 
             Console.WriteLine("------ Propriedades do DateTime ------");
 
-            Console.WriteLine("DateTime escolhido: ");
-            Console.WriteLine(d);
+            Console.Write("DateTime escolhido: ");
+            Console.WriteLine(d + "\r\n");
 
             Console.WriteLine("1) Date: " + d.Date);
 
