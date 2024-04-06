@@ -1,5 +1,6 @@
 ﻿using System;
 using primeiraAula.Cap4.Classes;
+using System.Globalization;
 
 namespace CursoDeCsharp
 {    class test
@@ -7,93 +8,36 @@ namespace CursoDeCsharp
         {
             /* Hub de teste */
 
-            /* Nessa aula demonstraremos funções que podem ser utilizada por strings.
-            Veja abaixo a explicação e execução de cada uma delas:                                               */
+            DateTime d5 = DateTime.Now;
+            DateTime d6 = DateTime.UtcNow;
+            DateTime d7 = DateTime.Today;
+            
+            /* Para o DateTime.Parse, demonstraremos diferentes formatações para que possamos ter uma breve noção das mesmas.
+            É interessante informar que todas as formas de formatá-lo podem ser encontradas na web, caso seja necessário. */
+            DateTime d8 = DateTime.Parse("2024-04-06");
+            DateTime d9 = DateTime.Parse("26/10/1999 09:45:54");
+            /* Note também que para demonstrar as horas em string, saltamos após o ultimo elemento da data com um espaço, e assim
+            nosso compilador entenderá que a partir daquele ponto será indicado as horas!                                          */
 
-            /* Para ser mais didático ao demonstrá-las, vamos criar uma string principal, e modificaremos a mesma
-            utilizando as funções.                                                                               */
+            DateTime d10 = DateTime.ParseExact("1999-10-26" , "yyyy-MM-dd", CultureInfo.InvariantCulture);
+            /* Para o ParseExact, são necessários 2 parâmetros como vistos acima. São eles: A demonstração de como a nossa data será
+            formatada, utilizando yyyy para ano, MM para mes e dd para os dias, e o Provider ou seja, como o compilador deverá prover
+            aquele sistema, que no nosso caso acima utilizamos o CultureInfo.InvariantCulture (é necessário também chamar sua biblio-
+            teca: System.Globalization)                                                                                            */
 
-            string original = "abc abCDe abcdEFG  ";
+            DateTime d11 = DateTime.ParseExact("11/12/2012 09:59:02" , "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+            /* Assim como a data utiliza padrões para determinar seus parâmetros, as horas também utilizam do mesmo, sendo HH para
+            hora, mm para minutos e ss para segundos!                                                                             */
 
-            /* Para começarmos, vamos utilizar as funções .ToLower(), que converte a string para letras minúsculas.
-            Veja a seguir:                                                                                       */
+            /* Agora vamos ver a execução dos mesmos:                                                                             */
 
-            string lower = original.ToLower();
-
-            /* Agora, vamos utilizar a função .ToUpper(), que converte a string para letras maiúsculas.
-            Veja a seguir:                                                                                       */
-
-            string upper = original.ToUpper();
-
-            /* Em seguida, utilizaremos a função .Trim(), onde esta apaga todos os espaços em branco antes do pri-
-            meiro caracter da string e também após o ultimo caracter da mesma.
-            Veja a seguir:                                                                                       */
-
-            string trim = original.Trim();
-
-            /* Agora, utilizaremos a função IndexOf(), onde esta demonstrará o index(posição) da primeira ocorrência
-            do texto que será colocado como parametro.
-            Veja a seguir:                                                                                        */
-
-            int indexOf = original.IndexOf("bc");
-
-            /* Além do IndexOf(), existe também o LastIndexOf(), que assim como seu semelhante demonstra o index
-            de um texto, porém, demonstrando a ultima ocorrência do mesmo na string.
-            Veja a seguir:                                                                                        */
-
-            int lastIndexOf = original.LastIndexOf("bc");
-
-            /* Outra função que temos ao utilizarmos as strings é a de Substring(), onde essa nos permite criar ou-
-            tra string a partir da original, utilizando apenas os elementos a partir do index que desejarmos.
-            Veja a seguir:                                                                                        */
-
-            string substring = original.Substring(4);
-
-            /* Além de nos permitir criar outra string a partir do index, a função Substring() nos permite também
-            determinar a quantidade de caracter que desejamos utilizar a partir do index passado.
-            Veja a seguir:                                                                                       */
-
-            string substring2 = original.Substring(4 , 5);
-
-            /* Outra função interessante que temos ao utilizarmos as string é a Replace(), onde esta nos permite
-            trocar todas as ocorrências de um caracter por outro.
-            Veja a seguir:                                                                                      */
-
-            string replace = original.Replace('a' , 'x');
-
-            /* Assim como a função Substring(), a função Replace() também pode ser executada de forma mais elaborada
-            e nesse caso, o replace nos permite utilizar um texto como parâmetro e trocá-lo por outro.
-            Veja a seguir:                                                                                        */
-
-            string replaceTxt = original.Replace("abc" , "xyz");
-
-            /* Outra função de extrema importancia ao analizar entradas é a IsNullOrEmpty(), na qual nos retornará
-            se a variável é nula ou esta vazia.
-            Veja a seguir:                                                                                       */
-
-            bool isNullOrEmpty = String.IsNullOrEmpty(original);
-
-            /* Além da função acima, é possível também verificar se ao invez de somente estar vazia ou ser nula, se
-            a string possui somente espaços em branco dentro dela.
-            Veja a seguir:                                                                                        */
-
-            bool isNullOrWhiteSpace = String.IsNullOrWhiteSpace(original);
-
-            /* E para finalizarmos, vamos ver como ficaram nossas string baseadas em nossas funções.
-            Veja a seguir:                                                                                        */
-
-            Console.WriteLine("STRING ORIGINAL: -" + original + "-");
-            Console.WriteLine("STRING TO_LOWER: -" + lower + "-");
-            Console.WriteLine("STRING TO_UPPER: -" + upper + "-");
-            Console.WriteLine("STRING TRIM: -" + trim + "-");
-            Console.WriteLine("STRING INDEX_OF('bc'): " + indexOf);
-            Console.WriteLine("STRING LAST_INDEX_OF('bc'): " + lastIndexOf);
-            Console.WriteLine("STRING SUBSTRING(4): -" + substring + "-");
-            Console.WriteLine("STRING SUBSTRING_DETERMINANDO_QTD_DE_CARACTERES_DESEJADOS(4 , 5): -" + substring2 + "-");
-            Console.WriteLine("STRING REPLACE('a', 'X'): -" + replace + "-");
-            Console.WriteLine("STRING REPLACE_UTILIZANDO_TXT_COMO_PARAMETRO('abc' , 'xyz'): -" + replaceTxt + "-");
-            Console.WriteLine("STRING IS_NULL_OR_EMPTY: " + isNullOrEmpty);
-            Console.WriteLine("STRING IS_NULL_OR_WHITE_SPACE: " + isNullOrWhiteSpace);
+            Console.WriteLine(d5);
+            Console.WriteLine(d6);
+            Console.WriteLine(d7);
+            Console.WriteLine(d8);
+            Console.WriteLine(d9);
+            Console.WriteLine(d10);
+            Console.WriteLine(d11);
         }
     }
 }
