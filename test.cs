@@ -88,14 +88,42 @@ namespace CursoDeCsharp
             nutos, "ss" para segundos e "fff..." para os milissegundos.
             Veja os a seguir na prática:                                                                                       */
 
-            Console.Write("ToString('yyyy/MM/dd HH:mm:ss'): ");
-            Console.WriteLine(d.ToString("yyyy/MM/dd HH:mm:ss"));
+            /* ------ Operações com o DateTime ------
 
-            Console.Write("ToString('dd-MM-yyyy HH:mm'): ");
-            Console.WriteLine(d.ToString("dd-MM-yyyy HH:mm"));
+            Além de formatações e propriedades, o DateTime nos permite também fazer operações com o mesmo, já que ao utilizarmos
+            datas podemos nos deparar com situações que tornam necessário adicionar ou subtrair "tempo" da mesma, para que possamos
+            calcular, especular, ...
 
-            Console.Write("ToString(yyyy-MM-dd HH:mm:ss.ffff): ");
-            Console.WriteLine(d.ToString("yyyy-MM-dd HH:mm:ss.ffff"));
+            Então para isso utilizamos o Add+TempoDesejado(Day, Minutes, Seconds...) e o Subtract(TimeSpan), como será demonstrado a
+            seguir:                                                                                                               */
+
+            Console.WriteLine("\r\n------ Operações com o DateTime ------");
+
+            DateTime diaInicial = new DateTime (2024,04,09,10,30,40);
+
+            Console.Write("DateTime base: ");
+            Console.WriteLine(diaInicial.ToString("dd/MM/yyyy HH:mm:ss"));
+
+            DateTime maisDoisDias = diaInicial.AddDays(2);
+            Console.Write("AddDays(2): ");
+            Console.WriteLine(maisDoisDias);
+
+            DateTime mais10Min = diaInicial.AddMinutes(10);
+            Console.Write("AddMinutes(10): ");
+            Console.WriteLine(mais10Min);
+
+            DateTime diaHipotetico = new DateTime(2024,04,09,12,40,0);
+
+            /*O único ponto que devemos ficar cientes ao subtrairmos "tempo", é que o seu resultado será um TimeSpan, então para que
+            possamos receber seu resultado é necessário criar uma variável de tal tipo para que possamos obte-lo, veja a seguir:   */
+
+            TimeSpan diferençaEntreOsDias = diaHipotetico.Subtract(diaInicial);
+
+            Console.Write("Dia hipotetico: ");
+            Console.WriteLine(diaHipotetico.ToString("dd/MM/yyyy HH:mm:ss"));
+
+            Console.Write("Dia hipotetico.Subtract(DiaInicial): ");
+            Console.WriteLine(diferençaEntreOsDias);
 
         }
     }
