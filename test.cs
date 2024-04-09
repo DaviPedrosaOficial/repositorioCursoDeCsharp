@@ -41,6 +41,62 @@ namespace CursoDeCsharp
 
             Console.WriteLine("13) Year: " + d.Year);
 
+            /* Além de propriedades temos também diferentes maneiras de formatarmos o DateTime, vamos ver algumas delas a
+            seguir:                                                                                                      */
+
+            Console.WriteLine("\r\n------ Formatação do DateTime ------");
+
+            /* A primeira maneira que temos é o ToLongDateString(), onde esta demonstra no terminal a data de uma forma mais
+            completa, demonstrando o dia e o mes por extenso, sem as horas.
+            É importante salientar, que o processo que esta ocorrendo ao formatar o nosso DateTime é uma tranformação do struct
+            para uma string, ou seja, se quisessemos armazenar o resultado do mesmo dentro de uma variável string seria possível!
+            Veja a seguir a implementação do mesmo:                                                                            */
+
+            Console.Write("ToLongDateString(): ");
+            Console.WriteLine(d.ToLongDateString());
+
+            /* A próxima formatação que teremos é o ToLongTimeString, onde neste teremos a transformação das horas de nosso Date-
+            Time em uma string. E nessa será demonstrado as horas por completo, demonstrando as horas, minutos e segundos.
+            Veja a seguir:                                                                                                     */
+
+            Console.WriteLine("ToLongTimeString(): ");
+            Console.WriteLine(d.ToLongTimeString());
+
+            /* Temos também o ToShortDateString(), que ao contrario do ToLongDateString(), esse demonstrará a data de forma resu-
+            mida, apresentando somente os números.
+            Veja a seguir:                                                                                                     */
+
+            Console.Write("ToShortDateString(): ");
+            Console.WriteLine(d.ToShortDateString());
+
+            /* Assim como o ToShortDateString, teremos o ToShortTimeString(), que demonstra as horas de nosso DateTime de maneira
+            resumida, apresentando somente as horas e os minutos.
+            Veja a seguir:                                                                                                     */
+
+            Console.Write("ToShortTimeString(): ");
+            Console.WriteLine(d.ToShortTimeString());
+
+            /* E por último demonstraremos o ToString(), no qual este demonstrará a data de forma resumida, apresentando somente
+            os números para a data e a hora. Além disso, é possível formatá-lo de diversas maneiras, como veremos a seguir:   */
+
+            Console.Write("ToString(): ");
+            Console.WriteLine(d.ToString());
+
+            /* Como dito acima temos diferentes maneiras de formatarmos o ToString(), e estas se baseam na forma apresentada pelo
+            dev, utilizando a nomenclatura correta para demonstrar a maneira como será apresentado o ToString().
+            E para isso, utilizamos o "yyyy" para o ano, "MM" para o mes, "dd" para os dias, "HH" para as horas, "mm" para os mi-
+            nutos, "ss" para segundos e "fff..." para os milissegundos.
+            Veja os a seguir na prática:                                                                                       */
+
+            Console.Write("ToString('yyyy/MM/dd HH:mm:ss'): ");
+            Console.WriteLine(d.ToString("yyyy/MM/dd HH:mm:ss"));
+
+            Console.Write("ToString('dd-MM-yyyy HH:mm'): ");
+            Console.WriteLine(d.ToString("dd-MM-yyyy HH:mm"));
+
+            Console.Write("ToString(yyyy-MM-dd HH:mm:ss.ffff): ");
+            Console.WriteLine(d.ToString("yyyy-MM-dd HH:mm:ss.ffff"));
+
         }
     }
 }

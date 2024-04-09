@@ -94,7 +94,7 @@ namespace CursoDeCsharp{
             Time em uma string. E nessa será demonstrado as horas por completo, demonstrando as horas, minutos e segundos.
             Veja a seguir:                                                                                                     */
 
-            Console.WriteLine("ToLongTimeString(): ");
+            Console.Write("ToLongTimeString(): ");
             Console.WriteLine(d.ToLongTimeString());
 
             /* Temos também o ToShortDateString(), que ao contrario do ToLongDateString(), esse demonstrará a data de forma resu-
@@ -123,8 +123,17 @@ namespace CursoDeCsharp{
             nutos, "ss" para segundos e "fff..." para os milissegundos.
             Veja os a seguir na prática:                                                                                       */
 
-            Console.WriteLine("ToString('yyyy/MM/dd HH:mm:ss'): ");
+            Console.Write("ToString('yyyy/MM/dd HH:mm:ss'): ");
             Console.WriteLine(d.ToString("yyyy/MM/dd HH:mm:ss"));
+
+            Console.Write("ToString('dd-MM-yyyy HH:mm'): ");
+            Console.WriteLine(d.ToString("dd-MM-yyyy HH:mm"));
+
+            Console.Write("ToString(yyyy-MM-dd HH:mm:ss.ffff): ");
+            Console.WriteLine(d.ToString("yyyy-MM-dd HH:mm:ss.ffff"));
+
+            /* Note que podemos fazer a sua formatação de diversas maneiras, desde que utilizemos seus princípios de formatação de
+            forma correta! */
 
 
 
