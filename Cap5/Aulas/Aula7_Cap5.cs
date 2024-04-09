@@ -76,7 +76,9 @@ namespace CursoDeCsharp{
 
             Console.WriteLine("13) Year: " + d.Year);
 
-            /* Além de propriedades temos também diferentes maneiras de formatarmos o DateTime, vamos ver algumas delas a
+            /* ------ Formatações do DateTime ------
+
+            Além de propriedades temos também diferentes maneiras de formatarmos o DateTime, vamos ver algumas delas a
             seguir:                                                                                                      */
 
             Console.WriteLine("\r\n------ Formatação do DateTime ------");
@@ -134,6 +136,14 @@ namespace CursoDeCsharp{
 
             /* Note que podemos fazer a sua formatação de diversas maneiras, desde que utilizemos seus princípios de formatação de
             forma correta! */
+
+
+
+            /* ------ Operações com o DateTime ------
+
+            Além de formatações e propriedades, o DateTime nos permite também fazer operações com o mesmo, já que ao utilizarmos
+            datas podemos nos deparar com situações que tornam necessário adicionar ou subtrair "tempo" da mesma, para que possamos
+            calcular, especular, ...   */
 
 
 
