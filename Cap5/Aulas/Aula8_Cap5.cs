@@ -1,12 +1,12 @@
-﻿using System;
-using primeiraAula.Cap4.Classes;
-using System.Globalization;
+/* ------ Propriedades e operações com o TimeSpan ------ */
 
-namespace CursoDeCsharp
-{    class test
-    {        static void Main(string[] arg)
-        {
-            /* Hub de teste */
+using System;
+
+namespace CursoDeCsharp{
+
+    class Aula8_Cap5{
+
+        static void _Aula8_Cap5(string [] arg){
 
             /* ------ Propriedades do TimeSpan ------
 
@@ -69,11 +69,11 @@ namespace CursoDeCsharp
             Console.Write("\r\nTimeSpan 1: ");
             Console.WriteLine(tempo1);
 
-            Console.Write("\r\nTimeSpan 2: ");
+            Console.WriteLine("\r\nTimeSpan 2: ");
             Console.WriteLine(tempo2);
 
             TimeSpan soma = tempo1.Add(tempo2);
-            Console.Write("\r\nAdição entre TimeSpan 1 & 2: ");
+            Console.Write("Adição entre TimeSpan 1 & 2: ");
             Console.WriteLine(soma);
 
             TimeSpan subtracao = tempo1.Subtract(tempo2);
@@ -96,9 +96,6 @@ namespace CursoDeCsharp
             Console.Write("Divisão TimeSpan 2 / 2: ");
             Console.WriteLine(divisao2);
 
-
         }
     }
 }
-
-
