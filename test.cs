@@ -8,95 +8,28 @@ namespace CursoDeCsharp
         {
             /* Hub de teste */
 
-            /* ------ Propriedades do TimeSpan ------
+            Console.WriteLine("------ DateTimeKind e suas mudanças ------");
 
-            Assim como no DateTime, no TimeSpan temos a possibilidade de encontrar suas propriedades através de suas
-            palavras chave. Para refrescarmos nossa memoria, vamos demonstra-las a seguir:                        */
+            DateTime myDate1 = new DateTime(2024,04,11,10,38,55, DateTimeKind.Local);
+            /* Note que dentro da instanciação, demonstramos que esse nosso DateTime é Local */
 
-            Console.WriteLine("------ Propriedades do TimeSpan ------");
+            DateTime myDate2 = new DateTime(2024,04,11,10,38,55, DateTimeKind.Utc);
+            /* Assim como na instanciação do 1º DateTime, nesse demontramos também seu tipo, onde dessa vez, foi UTC */
 
-            TimeSpan t = new TimeSpan(2, 3, 5, 7, 11);
+            DateTime myDate3 = new DateTime(2024,04,11,10,38,55);
+            /* E por ultimo, instanciamos um DateTime sem demonstrarmos o seu tipo */
 
-            Console.Write("\r\nTimeSpan base: ");
-            Console.WriteLine(t);
+            /* Agora, vamos ver se há alguma diferença, ao demonstrá-los em nosso terminal, já que todos foram instanciados
+            de maneiras diferentes:                                                                                      */
 
-            Console.WriteLine("TimeSpan.Days: " + t.Days);
-            Console.WriteLine("TimeSpan.Hours: " + t.Hours);
-            Console.WriteLine("TimeSpan.Minutes: " + t.Minutes);
-            Console.WriteLine("TimeSpan.Milliseconds: " + t.Milliseconds);
-            Console.WriteLine("TimeSpan.Seconds: " + t.Seconds);
-            Console.WriteLine("TimeSpan.Ticks: " + t.Ticks);
+            Console.Write("\r\nmyDate1.DateTimeKind.Local: ");
+            Console.WriteLine(myDate1);
 
-            /* Agora, vamos explicar o que é o Total... que será utilizado a seguir.
+            Console.Write("myDate2.DateTimeKind.Utc: ");
+            Console.WriteLine(myDate2);
 
-            Reflita sobre o TimeSpan criado acima. Sabemos que por mais que tenhamos apenas 2 dias sendo demonstrados
-            o mesmo já percorreu 3 horas, o que nos explicita que parte daquele dia já se passou, então o valor da-
-            quele dia já passou de somente 2 (int), devido a essas horas.
-
-            Compreendendo este conceito, podemos compreender melhor o que são os Total... de nosso TimeSpan, onde o
-            mesmo, visa entregar o valor exato do tempo percorrido em cada um de seus parâmetro, e para isso ele nos
-            retorna em números quebrados o valor de dias, horas, minutos... Buscando nos retornar o valor completo de
-            suas propriedades.
-
-            Veja a seguir como fica na prática e tente refletir sobre o que foi descrito acima:                    */
-
-            Console.WriteLine("TimeSpan.TotalDays: " + t.TotalDays);
-            Console.WriteLine("TimeSpan.TotalHours: " + t.TotalHours);
-            Console.WriteLine("TimeSpan.TotalMinutes: " + t.TotalMinutes);
-            Console.WriteLine("TimeSpan.TotalSeconds: " + t.TotalSeconds);
-            Console.WriteLine("TimeSpan.TotalMilliseconds: " + t.TotalMilliseconds);
-
-            /* ------ Operações com o TimeSpan ------
-            
-            Existem 4 operações diferentes para o TimeSpan, são elas:
-            
-            1) Adição => .Add()
-            2) Subtração => .Subtract()
-            3) Multiplicação => .Multiply()
-            4) Divisão => .Divide()
-            
-            Porém, existem diferenças na implementação das mesma, onde, para a adição e subtração, utilizamos outro
-            TimeSpan como parâmetro para somarmos ou subtrairmos, e já para a multiplicação e divisão utilizamos um
-            double para a sua implementação.
-            
-            Vamos vê-las a seguir na prática:                                                                    */
-
-            Console.WriteLine("\r\n------ Operações com o TimeSpan ------");
-
-            TimeSpan tempo1 = new TimeSpan(1,2,30,20);
-            TimeSpan tempo2 = new TimeSpan(1,15,10);
-
-            Console.Write("\r\nTimeSpan 1: ");
-            Console.WriteLine(tempo1);
-
-            Console.Write("\r\nTimeSpan 2: ");
-            Console.WriteLine(tempo2);
-
-            TimeSpan soma = tempo1.Add(tempo2);
-            Console.Write("\r\nAdição entre TimeSpan 1 & 2: ");
-            Console.WriteLine(soma);
-
-            TimeSpan subtracao = tempo1.Subtract(tempo2);
-            Console.Write("Subtração entre TimeSpan 1 & 2: ");
-            Console.WriteLine(subtracao);
-
-            TimeSpan multiplicacao1 = tempo1.Multiply(2.0);
-            Console.Write("Multiplicação TimeSpan 1 * 2: ");
-            Console.WriteLine(multiplicacao1);
-
-            TimeSpan multiplicacao2 = tempo2.Multiply(3.0);
-            Console.Write("Multiplicação TimeSpan 2 * 3: ");
-            Console.WriteLine(multiplicacao2);
-
-            TimeSpan divisao1 = tempo1.Divide(3.0);
-            Console.Write("Divisão TimeSpan 1 / 3: ");
-            Console.WriteLine(divisao1);
-
-            TimeSpan divisao2 = tempo2.Divide(2.0);
-            Console.Write("Divisão TimeSpan 2 / 2: ");
-            Console.WriteLine(divisao2);
-
-
+            Console.Write("myDate3: ");
+            Console.WriteLine(myDate3);
         }
     }
 }
