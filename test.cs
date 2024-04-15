@@ -117,6 +117,46 @@ namespace CursoDeCsharp
 
             Console.Write("myDate3.ToUniversalTime(): ");
             Console.WriteLine(myDate3.ToUniversalTime());
+
+            /* ------ Padrão ISO 8601 ------
+
+            O padrão ISO 8601 é uma maneira de formatarmos um DateTime, na qual o mesmo já faz por padrão a formatação de nossa data.
+            E isso ocorre da senguinte forma, ao utilizarmos a sua formatação ao criarmos nosso DateTime, nosso compilador já criará o
+            mesmo em padrão Universal (Utc) e fará a conversão automaticamente do DateTime para Local. Ou seja, ao demonstrarmos (ins-
+            tanciarmos) o nosso DateTime, o mesmo será demonstrado utilizando o tipo Local, para se alinhar com a maquina na qual nosso
+            projeto está rodando, mas em seu core, o mesmo DateTime estará em padrão Utc.
+
+            Além disso, é necessário salientar que o padrão ISO 8601, é aceito pelo nosso compilador apenas através de String, ou seja
+            para criarmos um DateTime utilizando o mesmo padrão, deveremos criar seu tempo em String, como veremos abaixo.
+
+            Outro ponto importante é como criar um DateTime em tal padrão, e para isso, utilizaremos da seguinte nomenclatura:
+            yyyy-MM-ddTHH:mm:ssZ (Basicamente a nomenclatura normal que utilizamos, com a adição do T entre os dias e as horas, e o Z
+            ao final)
+
+            Agora, vamos a prática, para que possamos entender de fato a sua execução e funcionalidade:                             */
+
+            Console.WriteLine("\r\n------ Padrão ISO 8601 ------");
+
+            /* Criando o nosso DateTime, utilizando o padrão ISO 8601. */
+            Console.WriteLine("\r\nData que foi apresentada para nosso DateTime padraoISO: 2024-04-15T10:44:00Z");
+            DateTime padraoISO = DateTime.Parse("2024-04-15T10:44:00Z");
+
+            Console.Write("DateTime padraoISO: ");
+            Console.WriteLine(padraoISO);
+            /* Note na execução do terminal, que ao chamarmos nosso DateTime, o mesmo ja foi informado na formatação Local de nossa ma-
+            quina, onde o horário que demos foi 10:44:00, e o ser demonstrado foi retornado 07:44:00, já que estamos no Brasil, e nosso
+            horário comparado ao de Greenwich é -3 horas */
+
+            Console.Write("padraoISO.Kind: ");
+            Console.WriteLine(padraoISO.Kind);
+            /* E consequentemente, nosso tipo de DateTime, passou também a ser Local, já que ao utilizarmos o padrão ISO, o mesmo pas-
+            sou o nosso DateTime para Local. */
+
+            Console.Write("padraoISO.ToLocalTime(): ");
+            Console.WriteLine(padraoISO.ToLocalTime());
+
+            Console.Write("padraoISO.ToUniversalTime(): ");
+            Console.WriteLine(padraoISO.ToUniversalTime());
         }
     }
 }
