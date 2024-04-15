@@ -165,6 +165,19 @@ namespace CursoDeCsharp{
             Console.Write("padraoISO.ToUniversalTime(): ");
             Console.WriteLine(padraoISO.ToUniversalTime());
 
+            /* E para encerrarmos, precisamos mais uma vez salientar que para printarmos uma data que utilizou a formatação no padrão
+            ISO 8601, é necessário colocar o .ToUniversalTime() antes, pois como foi visto acima, ao utilizarmos da formatação, o com-
+            pilador transformará aquela data para o tipo Local de nosso DateTime, ou seja, em diferentes locais do mundo teremos dife-
+            rentes datas. Sendo assim, necessário passarmos antes para UTC quando for necessário.
+            Veja a seguir a demonstração:                                                                                          */
+
+            Console.WriteLine("\r\n--- Demonstrando a importancia de se passar para o UTC ---");
+
+            Console.Write("Demonstracao de como ficaria sem passar para o UTC: ");
+            Console.WriteLine(padraoISO.ToString("yyyy-MM-ddTHH:mm:ssZ"));
+
+            Console.Write("Demonstracao de como ficaria passando para o UTC: ");
+            Console.WriteLine(padraoISO.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ"));
         }
     }
 }
