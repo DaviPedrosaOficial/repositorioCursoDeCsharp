@@ -1,8 +1,9 @@
 ﻿/* ------ Começando a resolver um segundo problema exemplo ------ */
 
 using System;
+using CursoDeCsharp.Cap2.Classes;
 
-namespace CursoDeCsharp
+namespace CursoDeCsharp.Cap2.Aulas
 {
     class Aula4
     {

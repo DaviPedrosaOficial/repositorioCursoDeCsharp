@@ -1,12 +1,14 @@
-﻿namespace primeiraAula.Cap4.Classes;
-
-public struct Ponto
+﻿namespace CursoDeCsharp.Cap4.Classes
 {
-    public int X;
-    public int Y;
 
-    public override string ToString()
+    public struct Ponto
     {
-        return $"({X},{Y})";
+        public int X;
+        public int Y;
+
+        public override string ToString()
+        {
+            return $"({X},{Y})";
+        }
     }
 }

@@ -1,6 +1,7 @@
 /* ------ Sintaxe alternativa (expressão condicional ternária) ------ */
 
-namespace CursoDeCsharp{
+namespace CursoDeCsharp.Cap5.Aulas
+{
 
     class Aula3_Cap5{
 

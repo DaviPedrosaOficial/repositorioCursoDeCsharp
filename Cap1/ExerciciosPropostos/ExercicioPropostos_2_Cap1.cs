@@ -3,7 +3,7 @@
 using System;
 using System.Threading.Channels;
 
-namespace CursoDeCsharp
+namespace CursoDeCsharp.Cap1.ExerciciosPropostos
 {
     class ExercicioPropostos_2_Cap1
     {

@@ -69,6 +69,29 @@ namespace CursoDeCsharp
             };
 
             Console.WriteLine(pedidoTeste);
+
+            /* É possível também, passar valores de Enum para String e vice e versa, como veremos a seguir.
+            
+            É importante salientarmos que, a conversão de Enums para string, ocorre da mesma maneira que convertemos outros
+            tipos para string, ou seja, utilizando o ToString(). Já o contrário, é feito utilizando uma nomenclatura pareci-
+            da a de uma lista, onde utilizaremos o Enum.Parse<NomeDaClasseEnum>(NomeDoEstadoDesejado). Além disso, devemos
+            descrever o nome do status exatamente como ele foi definido em sua classe!
+            
+            Vamos ver abaixo como ficaria em nosso projeto:                                                              */
+
+            /*------ Conversão para string ------*/
+
+            string txt = OrderStatus.Delivered.ToString();
+
+            Console.Write("\r\nConversão para string: ");
+            Console.WriteLine(txt);
+
+            /*------ Conversão para Enum ------*/
+
+            OrderStatus order = Enum.Parse<OrderStatus>("PendingPayment");
+
+            Console.Write("Conversão para Enum: ");
+            Console.WriteLine(order);
         }
     }
 }

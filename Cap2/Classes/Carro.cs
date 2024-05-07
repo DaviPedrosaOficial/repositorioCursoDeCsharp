@@ -1,18 +1,19 @@
-﻿namespace CursoDeCsharp;
-
-public class Carro
+﻿namespace CursoDeCsharp.Cap2.Classes
 {
-    public int Ano;
-    public string Marca;
-    public string Modelo;
-
-    public override string ToString()
+    public class Carro
     {
-        return "Carro da Marca: "
-               + Marca
-               + "\r\nModelo: "
-               + Modelo
-               + "\r\nAno: "
-               + Ano;
+        public int Ano;
+        public string Marca;
+        public string Modelo;
+
+        public override string ToString()
+        {
+            return "Carro da Marca: "
+                + Marca
+                + "\r\nModelo: "
+                + Modelo
+                + "\r\nAno: "
+                + Ano;
+        }
     }
 }

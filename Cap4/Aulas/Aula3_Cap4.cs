@@ -1,6 +1,6 @@
 /* ------ Nullable ------ */
 
-namespace CursoDeCsharp
+namespace CursoDeCsharp.Cap4.Aulas
 {
     class Aula3_Cap4
     {

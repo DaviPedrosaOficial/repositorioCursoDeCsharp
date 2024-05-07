@@ -2,7 +2,7 @@
 
 using System;
 
-namespace CursoDeCsharp
+namespace CursoDeCsharp.Cap1.Aulas
 {
     class Aula13_Cap1
     {

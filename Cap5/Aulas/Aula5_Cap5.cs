@@ -3,7 +3,8 @@
 using System;
 using System.Globalization;
 
-namespace CursoDeCsharp{
+namespace CursoDeCsharp.Cap5.Aulas
+{
 
     class Aula5_Cap5{
 

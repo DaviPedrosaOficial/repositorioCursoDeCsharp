@@ -2,8 +2,9 @@
 
 using System;
 using System.Threading.Channels;
+using CursoDeCsharp.Cap3.Classes;
 
-namespace CursoDeCsharp
+namespace CursoDeCsharp.Cap3.Aulas
 {
     class Aula2_Cap3
     {

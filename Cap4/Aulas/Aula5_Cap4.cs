@@ -1,6 +1,9 @@
 /* ------ Modificador de parâmetros (params) ------ */
 
-namespace CursoDeCsharp{
+using CursoDeCsharp.Cap4.Classes;
+
+namespace CursoDeCsharp.Cap4.Aulas
+{
 
     class Aula5_Cap4{
 

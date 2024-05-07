@@ -1,6 +1,7 @@
 /* ------ Boxing & Unboxing ------ */
 
-namespace CursoDeCsharp{
+namespace CursoDeCsharp.Cap4.Aulas
+{
 
     class Aula7_Cap4{
 

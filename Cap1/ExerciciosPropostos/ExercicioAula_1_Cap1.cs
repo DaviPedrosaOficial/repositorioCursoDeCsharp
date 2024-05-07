@@ -3,7 +3,7 @@
 using System;
 using System.Globalization;
 
-namespace primeiraAula
+namespace CursoDeCsharp.Cap1.ExerciciosPropostos
 {
     class ExercicioAula_1_Cap1
     {

@@ -1,6 +1,8 @@
 ﻿/* ------ Membros estáticos (parte 2) ------ */
 
-namespace CursoDeCsharp
+using CursoDeCsharp.Cap2.Classes;
+
+namespace CursoDeCsharp.Cap2.Aulas
 {
     class Aula7
     {

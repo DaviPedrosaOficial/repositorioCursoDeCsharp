@@ -1,7 +1,8 @@
 /* ------ List (listas) ------ */
 using System.Collections.Generic;
 
-namespace CursoDeCsharp{
+namespace CursoDeCsharp.Cap4.Aulas
+{
 
     class Aula9_Cap4{
 

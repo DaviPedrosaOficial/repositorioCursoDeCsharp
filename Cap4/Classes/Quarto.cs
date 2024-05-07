@@ -1,6 +1,7 @@
 /* ------ Classe referente ao exercício proposto 1 ------ */
 
-namespace CursoDeCsharp{
+namespace CursoDeCsharp.Cap4.Classes
+{
 
     public class Quarto{
 

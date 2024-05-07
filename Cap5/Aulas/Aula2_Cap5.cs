@@ -1,6 +1,7 @@
 /* ------ Sintaxe alternativa (Switch Case) ------ */
 
-namespace CursoDeCsharp{
+namespace CursoDeCsharp.Cap5.Aulas
+{
 
     class Aula2_Cap5{
 

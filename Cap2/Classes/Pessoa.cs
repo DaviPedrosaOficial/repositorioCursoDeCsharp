@@ -1,7 +1,8 @@
-﻿namespace CursoDeCsharp;
-
-public class Pessoa
+﻿namespace CursoDeCsharp.Cap2.Classes
 {
-    public string Nome;
-    public int Idade;
+    public class Pessoa
+    {
+        public string Nome;
+        public int Idade;
+    }
 }

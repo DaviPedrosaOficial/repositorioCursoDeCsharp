@@ -1,6 +1,7 @@
 /* ------ Funções interessantes para string ------ */
 
-namespace CursoDeCsharp{
+namespace CursoDeCsharp.Cap5.Aulas
+{
 
     class Aula4_Cap5{
 

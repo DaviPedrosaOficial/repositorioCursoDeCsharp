@@ -1,17 +1,18 @@
-﻿namespace CursoDeCsharp;
-
-public class CalculadoraEstatica
+﻿namespace CursoDeCsharp.Cap2.Classes
 {
-    /* Note que basta colocarmos o prefixo static, que convertemos a classe para uma classe estática */
-    public static double Pi = 3.14;
-    
-    public static double Circunferencia(double r)
+    public class CalculadoraEstatica
     {
-        return 2.0 * Pi * r;
-    }
-    
-    public static double Volume(double r)
-    {
-        return 4.0 / 3.0 * Pi * r * r * r;
+        /* Note que basta colocarmos o prefixo static, que convertemos a classe para uma classe estática */
+        public static double Pi = 3.14;
+        
+        public static double Circunferencia(double r)
+        {
+            return 2.0 * Pi * r;
+        }
+        
+        public static double Volume(double r)
+        {
+            return 4.0 / 3.0 * Pi * r * r * r;
+        }
     }
 }

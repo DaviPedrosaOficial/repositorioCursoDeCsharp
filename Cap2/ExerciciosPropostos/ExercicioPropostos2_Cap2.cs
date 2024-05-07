@@ -2,6 +2,7 @@
 
 using System;
 using System.Threading.Channels;
+using CursoDeCsharp.Cap2.Classes;
 
 namespace CursoDeCsharp
 {

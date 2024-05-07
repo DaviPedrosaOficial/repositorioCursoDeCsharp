@@ -1,6 +1,7 @@
 ﻿/* ------ Exercícios propostos 1 (capítulo 2) ------ */
 
 using System;
+using CursoDeCsharp.Cap2.Classes;
 
 namespace CursoDeCsharp
 {

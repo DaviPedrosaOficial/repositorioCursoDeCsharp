@@ -1,6 +1,9 @@
 /* ------ Exercício Proposto 1 Cap 4 ------- */
 
-namespace CursoDeCsharp{
+using CursoDeCsharp.Cap4.Classes;
+
+namespace CursoDeCsharp.Cap4.ExercicioPropostos
+{
 
     class ExercicioPropostos1_Cap4{
 

@@ -1,8 +1,9 @@
 ﻿/* ------ Tipos referência vs tipos valor ------ */
 
-using primeiraAula.Cap4.Classes;
+using CursoDeCsharp.Cap4.Classes;
 
-namespace CursoDeCsharp{
+namespace CursoDeCsharp.Cap4.Aulas
+{
     
     class Aula1_Cap4{
 

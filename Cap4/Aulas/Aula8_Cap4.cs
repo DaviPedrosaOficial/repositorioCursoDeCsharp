@@ -1,6 +1,7 @@
 /* ------ Sintaxe opcional: laço foreach ------ */
 
-namespace CursoDeCsharp{
+namespace CursoDeCsharp.Cap4.Aulas
+{
 
     class Aula8_Cap4{
 

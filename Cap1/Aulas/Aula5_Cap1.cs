@@ -2,8 +2,8 @@
 
 using System;
 
-namespace CursoDeCsharp{
-    
+namespace CursoDeCsharp.Cap1.Aulas
+{
         class Aula5_Cap1
         {
                 static void _Aula5(string[] arg)

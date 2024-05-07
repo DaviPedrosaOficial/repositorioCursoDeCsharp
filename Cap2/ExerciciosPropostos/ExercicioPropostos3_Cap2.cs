@@ -1,5 +1,7 @@
 ﻿/* ------ Exercícios propostos 3 ------ */
 
+using CursoDeCsharp.Cap2.Classes;
+
 namespace CursoDeCsharp
 {
     class ExercicioPropostos3_Cap2

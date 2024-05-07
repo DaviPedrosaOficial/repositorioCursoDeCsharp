@@ -1,6 +1,7 @@
 /* ------ Praticando a utilização de matrizes ------ */
 
-namespace CursoDeCsharp{
+namespace CursoDeCsharp.Cap4.Aulas
+{
 
     class Aula11_Cap4{
 

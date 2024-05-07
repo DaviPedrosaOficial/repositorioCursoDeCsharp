@@ -2,7 +2,8 @@
 
 using System.Data.Common;
 
-namespace CursoDeCsharp{
+namespace CursoDeCsharp.Cap4.Classes
+{
 
     public class Funcionario3{
 

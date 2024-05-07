@@ -1,8 +1,9 @@
 ﻿/* ------ Exercícios propostos 1 ------ */
 
 using System.Threading.Channels;
+using CursoDeCsharp.Cap3.Classes;
 
-namespace CursoDeCsharp
+namespace CursoDeCsharp.Cap3.ExerciciosPropostos
 {
     class ExercicioPropostos1_Cap3
     {

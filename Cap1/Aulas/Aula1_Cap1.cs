@@ -1,9 +1,8 @@
 ﻿/* ------ Metodo de saída ------ */
 
 using System;
-using System.IO.Pipes;
 
-namespace primeiraAula
+namespace CursoDeCsharp.Cap1.Aulas
 {
     class Aula1_Cap1
     {

@@ -1,6 +1,6 @@
 /* Desaloca��o de m�moria - Garbage collector e escopo local */
 
-namespace CursoDeCsharp
+namespace CursoDeCsharp.Cap4.Aulas
 {
     class Aula2_Cap4
     {

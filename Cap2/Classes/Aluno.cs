@@ -1,26 +1,27 @@
-﻿namespace CursoDeCsharp;
-
-public class Aluno
+﻿namespace CursoDeCsharp.Cap2.Classes
 {
-    public double PrimeiroSemestre;
-    public double SegundoSemestre;
-    public double TerceiroSemestre;
-
-    public double NotaFinal()
+    public class Aluno
     {
-        return PrimeiroSemestre + SegundoSemestre + TerceiroSemestre;
-    }
+        public double PrimeiroSemestre;
+        public double SegundoSemestre;
+        public double TerceiroSemestre;
 
-    public override string ToString()
-    {
-        if (NotaFinal() >= 60)
+        public double NotaFinal()
         {
-            return "Nota final: " + NotaFinal().ToString("F2") + "\r\nAprovado";
+            return PrimeiroSemestre + SegundoSemestre + TerceiroSemestre;
         }
-        else
+
+        public override string ToString()
         {
-            return "Nota final: " + NotaFinal().ToString("F2") + "\r\nReprovado \r\nFaltaram: " +
-                   (60.0 - NotaFinal()).ToString("F2");
+            if (NotaFinal() >= 60)
+            {
+                return "Nota final: " + NotaFinal().ToString("F2") + "\r\nAprovado";
+            }
+            else
+            {
+                return "Nota final: " + NotaFinal().ToString("F2") + "\r\nReprovado \r\nFaltaram: " +
+                    (60.0 - NotaFinal()).ToString("F2");
+            }
         }
     }
 }

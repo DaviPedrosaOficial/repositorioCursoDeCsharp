@@ -5,7 +5,7 @@ using System.Globalization;
 
 namespace CursoDeCsharp
 {    class test
-    {        static void Main(string[] arg)
+    {        static void Test(string[] arg)
         {
             /* Hub de teste */
 

@@ -2,7 +2,7 @@
 
 using System;
 
-namespace CursoDeCsharp
+namespace CursoDeCsharp.Cap1.ExerciciosPropostos
 {
     class ExercicioPropostos_3_Cap1
     {

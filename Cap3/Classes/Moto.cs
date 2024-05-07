@@ -1,4 +1,4 @@
-﻿namespace CursoDeCsharp;
+﻿namespace CursoDeCsharp.Cap3.Classes;
 
 public class Moto
 {

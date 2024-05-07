@@ -1,6 +1,6 @@
 ﻿/* Sintaxe alternativa para iniciar valores de objetos */
 
-namespace CursoDeCsharp
+namespace CursoDeCsharp.Cap3.Aulas
 {
     class Aula3_Cap3
     {

@@ -1,6 +1,6 @@
 ﻿/* Classe referente a aula 2 do 3º capítulo */
 
-namespace CursoDeCsharp
+namespace CursoDeCsharp.Cap3.Classes
 {
     public class Produto2
     {

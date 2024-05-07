@@ -1,7 +1,8 @@
-﻿namespace CursoDeCsharp;
-
-public class Funcionario
+﻿namespace CursoDeCsharp.Cap2.Classes
 {
-    public string Nome;
-    public double Salario;
+    public class Funcionario
+    {
+        public string Nome;
+        public double Salario;
+    }
 }

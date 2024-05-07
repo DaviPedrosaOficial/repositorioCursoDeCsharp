@@ -1,6 +1,7 @@
 /* ------ Classe refente a aula 5 do Cap 4 ------ */
 
-namespace CursoDeCsharp{
+namespace CursoDeCsharp.Cap4.Classes
+{
 
     public class Calculadora2{
 

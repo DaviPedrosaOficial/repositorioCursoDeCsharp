@@ -1,6 +1,7 @@
 /* ------ Inferência de tipos (palavra var) ------ */
 
-namespace CursoDeCsharp{
+namespace CursoDeCsharp.Cap5.Aulas
+{
 
     class Aula1_Cap5{
 

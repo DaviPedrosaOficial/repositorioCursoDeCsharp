@@ -1,6 +1,6 @@
 ﻿/* ------ Modificadores de acesso ------ */
 
-namespace CursoDeCsharp
+namespace CursoDeCsharp.Cap3.Aulas
 {
     class Aula8_Cap3
     {

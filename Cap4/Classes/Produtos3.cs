@@ -1,6 +1,7 @@
 /* ------ Classe referente a aula 4, exercício 2 ------ */
 
-namespace CursoDeCsharp{
+namespace CursoDeCsharp.Cap4.Classes
+{
     
     public class Produto3{
 

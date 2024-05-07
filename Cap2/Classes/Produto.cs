@@ -1,23 +1,24 @@
-﻿namespace CursoDeCsharp;
-
-public class Produto
+﻿namespace CursoDeCsharp.Cap2.Classes
 {
-    public string Nome;
-    public double Preco;
-    public int Quantidade;
-
-    public double ValorTotalEmEstoque()
+    public class Produto
     {
-        return Preco * Quantidade;
-    }
+        public string Nome;
+        public double Preco;
+        public int Quantidade;
 
-    public void AdicionarProdutos(int qtd)
-    {
-        this.Quantidade += qtd;
-    }
+        public double ValorTotalEmEstoque()
+        {
+            return Preco * Quantidade;
+        }
 
-    public void RemoverProdutos(int qtd)
-    {
-        this.Quantidade -= qtd;
+        public void AdicionarProdutos(int qtd)
+        {
+            this.Quantidade += qtd;
+        }
+
+        public void RemoverProdutos(int qtd)
+        {
+            this.Quantidade -= qtd;
+        }
     }
 }

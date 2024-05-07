@@ -1,25 +1,26 @@
-﻿namespace CursoDeCsharp;
-
-public class Funcionario2
+﻿namespace CursoDeCsharp.Cap2.Classes
 {
-    public string Nome;
-    public double SalarioBruto;
-    public double Imposto;
-
-    public double SalarioLiquido()
+    public class Funcionario2
     {
-        return SalarioBruto - Imposto;
-    }
+        public string Nome;
+        public double SalarioBruto;
+        public double Imposto;
 
-    public double AumentarSalario(double porcentagem)
-    {
-        return SalarioBruto = SalarioBruto + (SalarioBruto * porcentagem / 100.0);
-    }
+        public double SalarioLiquido()
+        {
+            return SalarioBruto - Imposto;
+        }
 
-    public override string ToString()
-    {
-        return Nome +
-               " , R$ "
-               + SalarioLiquido().ToString("F2");
+        public double AumentarSalario(double porcentagem)
+        {
+            return SalarioBruto = SalarioBruto + (SalarioBruto * porcentagem / 100.0);
+        }
+
+        public override string ToString()
+        {
+            return Nome +
+                " , R$ "
+                + SalarioLiquido().ToString("F2");
+        }
     }
 }

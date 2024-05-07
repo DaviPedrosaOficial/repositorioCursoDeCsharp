@@ -1,6 +1,7 @@
 /* ------ Matrizes ------ */
 
-namespace CursoDeCsharp{
+namespace CursoDeCsharp.Cap4.Aulas
+{
 
     class Aula10_Cap4{
 

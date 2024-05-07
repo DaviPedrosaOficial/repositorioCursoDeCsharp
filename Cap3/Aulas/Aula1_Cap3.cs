@@ -1,6 +1,8 @@
 ﻿/* ------ Construtores ------ */
 
-namespace CursoDeCsharp
+using CursoDeCsharp.Cap3.Classes;
+
+namespace CursoDeCsharp.Cap3.Aulas
 {
     class Aula1_Cap3{
         

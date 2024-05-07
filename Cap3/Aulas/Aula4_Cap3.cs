@@ -1,6 +1,6 @@
 ﻿/* ------ Palavra this ------ */
 
-namespace CursoDeCsharp
+namespace CursoDeCsharp.Cap3.Aulas
 {
     class Aula4_Cap3
     {
