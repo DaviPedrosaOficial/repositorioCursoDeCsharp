@@ -1,13 +1,14 @@
-using System;
 using CursoDeCsharp.Cap6.Aulas.ExercicioProposto.Entities;
 using CursoDeCsharp.Cap6.Aulas.ExercicioProposto.Entities.Enums;
-using System.Globalization;
 
-namespace CursoDeCsharp
-{    class tempCodeRunnerFile
-    {        static void Main(string[] arg)
+namespace CursoDeCsharp.Cap6.Aulas.ExercicioProposto
+{
+    public class ExProposto
+    {
+        public void Ex_Proposto(string [] arg)
         {
-            /* Hub de teste */
+            /* Ler os dados de um pedido com N itens (N fornecido pelo usuário). Depois, mostrar um sumário do pedido
+            conforme exemplo (próxima página). Nota: o instante do pedido deve ser o instante do sistema: DateTime.Now */
 
             Client client= new Client();
 
