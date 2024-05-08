@@ -1,13 +1,36 @@
-using System;
+/* ------ Composição ------- */
 using CursoDeCsharp.Cap6.Aulas.Entities;
 using CursoDeCsharp.Cap6.Aulas.Entities.Enums;
-using System.Globalization;
 
-namespace CursoDeCsharp
-{    class tempCodeRunnerFile
-    {        static void Main(string[] arg)
+namespace CursoDeCsharp.Cap6.Aulas
+{
+    public class Aula2_Cap6
+    {
+        public void _Aula2_Cap6(string [] arg)
         {
-            /* Hub de teste */
+            /* ------ O que é a composição? ------
+
+             Composição é um tipo de associação que permite que um objeto contenha outro.
+
+             Dependendo do caso podemos ter associações do tipo "tem-um" ou "tem-varios", a depender do caso
+            em que estamos lidando.
+
+            --- Vantagens ao se trabalhar com a composição ---
+
+            - Organização do projeto (divisão de responsabilidades, ou seja, cada classe tem sua responsabilidade)
+            - Coesão (cada objeto é responsável por apenas uma tarefa, simples e bem definida)
+            - Flexibilidade (trabalhar com um projeto que cada parte tem suas obrigações torna-o muito simples e flexível)
+            - Reuso (Um mesmo objeto pode ser utilizado em mais de um local, já que eles tem suas obrigações definidas e pontuadas)
+
+             E para que possamos entender melhor o conceito faremos alguns exercícios para implementarmos na prática a composição.
+
+             1º Exercício:
+
+            Ler os dados de um trabalhador com N contratos (N fornecido pelo usuário). Depois, solicitar do usuário um mês e mostrar
+            qual foi o salário do funcionário nesse mês. (Para o execício foram criadas as classes: Worker, dpt, HourContract
+            e WorkerLevel)
+            
+            Agora abaixo, vamos fazer a execução do programa central (Main):                                                      */
 
             Console.Write("Enter the department name: ");
             string deptName = Console.ReadLine();
@@ -55,6 +78,7 @@ namespace CursoDeCsharp
             Console.WriteLine($"Name: {worker.Name}");
             Console.WriteLine($"Department: {worker.Department.Name}");
             Console.WriteLine($"Income for {monthAndYear}: {worker.Income(year,month):F2}");
+
         }
     }
 }
