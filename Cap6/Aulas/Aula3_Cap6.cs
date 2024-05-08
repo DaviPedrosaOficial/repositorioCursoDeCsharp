@@ -1,13 +1,14 @@
-using System;
+/* ------ Aula voltada ao exercício 2 sobre composição ------ */
 using CursoDeCsharp.Cap6.Aulas.Entities;
-using CursoDeCsharp.Cap6.Aulas.Entities.Enums;
-using System.Globalization;
 
-namespace CursoDeCsharp
-{    class tempCodeRunnerFile
-    {        static void Main(string[] arg)
+namespace CursoDeCsharp.Cap6.Aulas
+{
+    public class Aula3_Cap6
+    {
+        public void _Aula3_Cap6(string [] arg)
         {
-            /* Hub de teste */
+            /* Instancie manualmente os objetos mostrados abaixo e mostre-os na tela do terminal, conforme exemplo.
+            (objetos: Post & Comment, foram criadas classes para os mesmos)                                      */
 
             Comment c1 = new Comment("Have a nice trip!");
             Comment c2 = new Comment("Wow that was awesome!");
