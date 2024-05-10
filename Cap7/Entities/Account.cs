@@ -1,3 +1,5 @@
+/* Classe criada para exemplificar o conceito de Herança (Aula1) */
+
 namespace CursoDeCsharp.Cap7.Entities
 {
     class Account

@@ -34,7 +34,8 @@ namespace CursoDeCsharp.Cap7.Aulas
             - Herança é uma associação entre classes e não entre objetos (isso se deve ao fato de não ser necessário instanciarmos
             dois objetos, ou mais, para criar um sistema completo, em herança ao instanciarmos um objeto, que conterá todos os dados
             necessários dentro das suas necessidades).
-             */
+            
+            Para exemplificarmos o conceito, foram criadas as classes Account (Superclasse) e BusinessAccount (Subclasse) */
         }
     }
 }

@@ -1,3 +1,5 @@
+/* Classe criada para exemplificar o conceito de Herança (Aula1) */
+
 namespace CursoDeCsharp.Cap7.Entities
 {
     /* O sinal de ':' demonstra que a classe BusinessAccount herdará a classe Account, ou seja, o sinal que demonstra
