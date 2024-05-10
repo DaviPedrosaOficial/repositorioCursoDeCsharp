@@ -60,6 +60,8 @@ namespace CursoDeCsharp.Cap6.Aulas.ExercicioProposto.Entities
                 sb.AppendLine(item.Product.Name + ", Price: R$ "+ item.Price.ToString("F2") + ", Quantity: " + item.Quantity.ToString()
                 + ", SubTotal: R$ " + item.SubTotal().ToString("F2"));
             }
+            sb.AppendLine("Total Price:");
+            sb.AppendLine(Total().ToString("F2"));
 
             return sb.ToString();
         }

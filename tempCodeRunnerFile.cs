@@ -1,15 +1,7 @@
-using System;
 using CursoDeCsharp.Cap6.Aulas.ExercicioProposto.Entities;
 using CursoDeCsharp.Cap6.Aulas.ExercicioProposto.Entities.Enums;
-using System.Globalization;
 
-namespace CursoDeCsharp
-{    class tempCodeRunnerFile
-    {        static void Main(string[] arg)
-        {
-            /* Hub de teste */
-
-            Client client= new Client();
+Client client= new Client();
 
             Console.WriteLine("Enter client data:");
 
@@ -53,6 +45,3 @@ namespace CursoDeCsharp
 
             Console.WriteLine();
             Console.WriteLine(order);
-        }
-    }
-}
