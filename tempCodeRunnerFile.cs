@@ -1,47 +1,17 @@
-using CursoDeCsharp.Cap6.Aulas.ExercicioProposto.Entities;
-using CursoDeCsharp.Cap6.Aulas.ExercicioProposto.Entities.Enums;
+using CursoDeCsharp.Cap7.Entities;
 
-Client client= new Client();
+            Account acc = new Account(001, "Gustavo", 900);
+            Account acc1 = new BusinessAccount(002, "Maria", 900, 1500);
+            Account acc2 = new SavingsAccount(003, "Bruna", 900, 0.01);
 
-            Console.WriteLine("Enter client data:");
+            /* Agora que instanciamos nossos objetos, vamos executar o método Withdraw em cada um deles, para que possamos ver a di-
+            ferença do resultado em cada um deles:                                                                                */
+        
+            acc.Withdraw(60.0);
+            acc1.Withdraw(60.0);
+            acc2.Withdraw(60.0);
 
-            Console.Write("Name: ");
-            client.Name = Console.ReadLine();
-
-            Console.Write("Email: ");
-            client.Email = Console.ReadLine();
-
-            Console.Write("Birth Date (DD/MM/YYYY): ");
-            client.BirthDate = DateTime.Parse(Console.ReadLine());
-
-            Console.WriteLine();
-            Console.WriteLine("Enter order data: ");
-
-            Console.Write("Status: ");
-            OrderStatus status = Enum.Parse<OrderStatus>(Console.ReadLine());
-
-            Order order = new Order(DateTime.Now, status, client);
-
-            Console.WriteLine();
-            Console.Write("How many items to this order? ");
-            int n = int.Parse(Console.ReadLine());
-
-            for (int i = 1; i <= n; i++)
-            {
-                Console.WriteLine();
-                Console.WriteLine($"Enter #{i} item data:");
-                Console.Write("Name: ");
-                string name = Console.ReadLine();
-                Console.Write("Price: R$ ");
-                double price = double.Parse(Console.ReadLine());
-                Console.Write("Quantity: ");
-                int quant = int.Parse(Console.ReadLine());
-
-                Product prod = new Product(name, price);
-                OrderItem item= new OrderItem(quant,prod);
-
-                order.AddItem(item);
-            }
-
-            Console.WriteLine();
-            Console.WriteLine(order);
+            Console.WriteLine($"Valor na conta de todos antes da execução do método Withdraw: R$ 900,00");
+            Console.WriteLine($"Resultado do método na Superclasse Account: R${acc.Balance:F2}\r\n");
+            Console.WriteLine($"Resultado do método na Subclasse BusinessAccount: R${acc1.Balance:F2}\r\n");
+            Console.WriteLine($"Resultado do método na Subclasse SavingsAccount: R${acc2.Balance:F2}\r\n");

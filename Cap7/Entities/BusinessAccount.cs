@@ -26,5 +26,16 @@ namespace CursoDeCsharp.Cap7.Entities
                 Balance += amount;
             }
         }
+
+        /* (Aula 3 - Sobreposição) Para chamarmos a sobreposição utilizamos o prefíxo override, e assim dentro dos parênteses des-
+        crevemos como queremos que nosso método seja executado nos objetos da Subclasse.
+         Para realizamos o override podemos utilizar duas nomenclaturas, onde poderemos utilizar a palavra "base", que como já vimos
+        ao utilizarmos a herança, reutiliza métodos, atributos de Superclasses. Ou fazermos de forma manual, como a descrita abaixo.
+         O método da classe SavingsAccount, utilizará o base!
+         Cheque-o para melhor compreensão.                                                                                        */
+        public override void Withdraw(double amount)
+        {
+            Balance -= amount + 1.0;
+        }
     }
 }

@@ -18,5 +18,11 @@ namespace CursoDeCsharp.Cap7.Entities
         {
             Balance += Balance * InterestRate;
         }
+
+        public override void Withdraw(double amount)
+        {
+            base.Withdraw(amount);
+            Balance -= 1.0;
+        }
     }
 }
