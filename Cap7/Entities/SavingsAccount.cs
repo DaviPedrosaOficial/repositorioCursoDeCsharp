@@ -1,6 +1,7 @@
 namespace CursoDeCsharp.Cap7.Entities
 {
-    class SavingsAccount : Account
+    /* (Aula 4 - Sealed) Para chamarmos o selamento devemos colocar o prefíxo sealed. */
+    sealed class SavingsAccount : Account
     {
         public double InterestRate { get; set; }
 
@@ -19,7 +20,10 @@ namespace CursoDeCsharp.Cap7.Entities
             Balance += Balance * InterestRate;
         }
 
-        public override void Withdraw(double amount)
+        /* (Aula 4 - Sealed) Já para métodos, quando se trata de selamento, devemos nos salientar que, para que o processo possa
+        ocorrer, o método tem de ser uma Sobreposição (Aula 3), para que possamos chamar o prefíxo sealed. Ou seja, so podemos se-
+        lar um método se o mesmo já foi sobrescrito! */
+        public sealed override void Withdraw(double amount)
         {
             base.Withdraw(amount);
             Balance -= 1.0;
